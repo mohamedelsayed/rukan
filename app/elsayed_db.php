@@ -15,7 +15,7 @@ $base_url = $http_string . $http_host;
 if (strpos($http_host, '.mohamedelsayed.net') !== FALSE) {
 	$database = 'elsayed_rukan';
 	$username = 'elsayed_rukan';
-    $password = 'xPBNZvrd8u8z';
+    $password = '1p5PrxyABczu';
 }
 if (strpos($http_host, 'lifecoachingegypt.com') !== FALSE) {
     $database = 'lifecoj0_lifecoa_chingwebsite';
