@@ -15,7 +15,7 @@ class PageController  extends AppController {
 	    $this->redirect(array('controller'=>'/'));					
 	}
 	function show($cat_id, $childid = 0){
-	    $base_url = $this->Session->read('Setting.url');
+	    $base_url = BASE_URL;
 	    $tree = array();
         $image = '';
         $this->loadModel('Cat');
@@ -139,7 +139,7 @@ class PageController  extends AppController {
         $pdf_name = '';
         if(isset($child_cat['Cat']['pdf_file'])){
             if(trim($child_cat['Cat']['pdf_file']) != ''){
-                $pdf_file = $this->Session->read('Setting.url')."/app/webroot/files/upload/".$child_cat['Cat']['pdf_file'];
+                $pdf_file = BASE_URL."/app/webroot/files/upload/".$child_cat['Cat']['pdf_file'];
                 $pdf_name = str_replace('.pdf', '', $child_cat['Cat']['pdf_file']);
                 $pdf_name = substr($pdf_name,0,strrpos($pdf_name,"_"));
                 $pdf_name = 'Click here for '.str_replace('_', ' ', $pdf_name);
@@ -733,7 +733,7 @@ class PageController  extends AppController {
             }               
         }
         if($type == 'notajax'){
-            $this->redirect($this->Session->read('Setting.url').'/');
+            $this->redirect(BASE_URL.'/');
         }elseif($type == 'ajax'){
             $this->autoRender = false;
         }   

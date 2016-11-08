@@ -13,7 +13,7 @@ class CareerController  extends AppController {
     var $development_model = 'Development';
     var $components = array('Email');
 	function index(){
-		$this->redirect($this->referer($this->Session->read('Setting.url')));			
+		$this->redirect($this->referer(BASE_URL));			
 	}
 	function all($type = ''){
 	    $title = '';
@@ -49,11 +49,11 @@ class CareerController  extends AppController {
             $this->set('body' , $cat_data['Cat']['body']);	
             $this->render($type);	        
         }else{
-            $this->redirect($this->referer($this->Session->read('Setting.url')));
+            $this->redirect($this->referer(BASE_URL));
         }
 	}
 	function item($id = ''){
-	    $base_url = $this->Session->read('Setting.url');
+	    $base_url = BASE_URL;
 	    $model = $this->development_model;	
 		$this->loadModel($model);
 		$item = $this->$model->find(
@@ -122,7 +122,7 @@ class CareerController  extends AppController {
     function draw_development_item($item, $model, $class){
         $item_div = '';
         if(!empty($item)){
-            $base_url = $this->Session->read('Setting.url');
+            $base_url = BASE_URL;
             $item_id = $item[$model]['id']; 
             $item_link = $base_url.'/career/item/'.$item_id;
             $image = '';
@@ -172,7 +172,7 @@ class CareerController  extends AppController {
     function draw_career_item($item, $model, $class){
         $item_div = '';
         if(!empty($item)){
-            $base_url = $this->Session->read('Setting.url');
+            $base_url = BASE_URL;
             $item_id = $item[$model]['id']; 
             $image = '';
             $body = $this->remove_unneeded_tags_from_string($item[$model]['description']);
@@ -274,9 +274,9 @@ class CareerController  extends AppController {
         if($type == 'notajax'){
             //for arabic
             /*if(isset($this->params['named']['lang'])){
-                $this->redirect($this->Session->read('Setting.url').'/career/all/vacancies/index/lang:'.$this->params['named']['lang']);
+                $this->redirect(BASE_URL.'/career/all/vacancies/index/lang:'.$this->params['named']['lang']);
             }else{*/    
-                $this->redirect($this->Session->read('Setting.url').'/career/all/vacancies');
+                $this->redirect(BASE_URL.'/career/all/vacancies');
             //}
         }elseif($type == 'ajax'){
             $this->autoRender = false;

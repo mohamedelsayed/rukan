@@ -9,7 +9,7 @@ class GalleryController  extends AppController {
 	var $uses = array('Album');	
     //var $limit = 9;
 	function index(){
-		$this->redirect($this->referer($this->Session->read('Setting.url')));			
+		$this->redirect($this->referer(BASE_URL));			
 	}
 	function all($tag = ''){
 	    $limit = $this->getGalleryPagingLimit();
@@ -85,7 +85,7 @@ class GalleryController  extends AppController {
     function draw_album($album, $class){
         $album_div = '';
         if(!empty($album)){
-            $base_url = $this->Session->read('Setting.url');
+            $base_url = BASE_URL;
             $album_id = $album['Album']['id']; 
             $album_link = $base_url.'/gallery/item/'.$album_id;            
             $image = '';

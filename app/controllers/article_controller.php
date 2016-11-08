@@ -8,7 +8,7 @@ class ArticleController  extends AppController {
 	var $name = 'Article';
 	var $uses = array('Article');	
 	function index(){
-		$this->redirect($this->referer($this->Session->read('Setting.url')));			
+		$this->redirect($this->referer(BASE_URL));			
 	}
 	function all($tag = ''){
 	    $limit = $this->getPagingLimit();
@@ -98,7 +98,7 @@ class ArticleController  extends AppController {
     function draw_article($article, $class){
         $article_div = '';
         if(!empty($article)){
-            $base_url = $this->Session->read('Setting.url');
+            $base_url = BASE_URL;
             $article_id = $article['Article']['id']; 
             $article_link = $base_url.'/article/item/'.$article_id;
             $article_date = date('F d, Y', strtotime($article['Article']['date'])); 
