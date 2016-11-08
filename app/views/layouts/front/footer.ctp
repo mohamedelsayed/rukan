@@ -10,7 +10,7 @@
                     <script type="text/javascript">
                         $(document).ready(function(){
                             $("#send_form").click(function(){           
-                                sendForm('<?php echo $this->Session->read('Setting.url');?>');                
+                                sendForm('<?php echo BASE_URL;?>');                
                             });             
                         });
                     </script>

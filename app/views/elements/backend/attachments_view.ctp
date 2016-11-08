@@ -27,7 +27,7 @@ if(!empty($attachments)){
             <?php
 			echo $this->Html->link(
 				'Download',
-				$this->Session->read('Setting.url')."/app/webroot/files/upload/".$attachment['file'],
+				BASE_URL."/app/webroot/files/upload/".$attachment['file'],
 				array('target' => '_blank', 'title'=>'Download', 'escape' => false));
 				if(isset($delete)){
 					echo $this->Html->link(
