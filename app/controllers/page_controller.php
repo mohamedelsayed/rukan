@@ -15,7 +15,7 @@ class PageController  extends AppController {
 	    $this->redirect(array('controller'=>'/'));					
 	}
 	function show($cat_id, $childid = 0){
-	    $base_url = BASE_URL;
+	    $base_url = $this->Session->read('Setting.url');
 	    $tree = array();
         $image = '';
         $this->loadModel('Cat');
@@ -139,7 +139,7 @@ class PageController  extends AppController {
         $pdf_name = '';
         if(isset($child_cat['Cat']['pdf_file'])){
             if(trim($child_cat['Cat']['pdf_file']) != ''){
-                $pdf_file = BASE_URL."/app/webroot/files/upload/".$child_cat['Cat']['pdf_file'];
+                $pdf_file = $this->Session->read('Setting.url')."/app/webroot/files/upload/".$child_cat['Cat']['pdf_file'];
                 $pdf_name = str_replace('.pdf', '', $child_cat['Cat']['pdf_file']);
                 $pdf_name = substr($pdf_name,0,strrpos($pdf_name,"_"));
                 $pdf_name = 'Click here for '.str_replace('_', ' ', $pdf_name);
@@ -723,7 +723,7 @@ class PageController  extends AppController {
             $html .= '</td></tr>';
             $this->set('html', $html);            
             $this->set('subject', $subject);
-            //$this->set('url', BASE_URL);                     
+            //$this->set('url', $settings['Setting']['url']);                     
             if ($this->Email->send()){
                 echo __('<span style="color:#00FF00;">Thank you for your message. He will get back to you the soonest.</span>', true);
                 //echo __('Thank you for your message. He will get back to you the soonest.', true);           
@@ -733,7 +733,7 @@ class PageController  extends AppController {
             }               
         }
         if($type == 'notajax'){
-            $this->redirect(BASE_URL.'/');
+            $this->redirect($this->Session->read('Setting.url').'/');
         }elseif($type == 'ajax'){
             $this->autoRender = false;
         }   

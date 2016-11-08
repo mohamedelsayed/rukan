@@ -9,7 +9,7 @@ class GalleryController  extends AppController {
 	var $uses = array('Album');	
     //var $limit = 9;
 	function index(){
-		$this->redirect($this->referer(BASE_URL));			
+		$this->redirect($this->referer($this->Session->read('Setting.url')));			
 	}
 	function all($tag = ''){
 	    $limit = $this->getGalleryPagingLimit();
@@ -85,7 +85,7 @@ class GalleryController  extends AppController {
     function draw_album($album, $class){
         $album_div = '';
         if(!empty($album)){
-            $base_url = BASE_URL;
+            $base_url = $this->Session->read('Setting.url');
             $album_id = $album['Album']['id']; 
             $album_link = $base_url.'/gallery/item/'.$album_id;            
             $image = '';
@@ -93,11 +93,17 @@ class GalleryController  extends AppController {
             if(isset($album['Gal'][0]['image'])){
                 $this->mainSmartResizeImage($album['Gal'][0]['image']);
                 $image = $base_url.'/img/upload/'.$album['Gal'][0]['image'];
-                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$album['Gal'][0]['image'];    
-                $image_size = getimagesize($image_path);          
+                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$album['Gal'][0]['image'];       
                 $max_height = 'max-height:100%;';
                 $max_width  = 'max-width:100%;';
                 $style = $max_width;
+				$image_size = array();
+				if(file_exists($image_path)){   
+	            	$image_size = getimagesize($image_path);          
+				}else{
+					$image = DEFAULT_IMAGE;
+					$style = 'width:100%;';
+				} 
                 if(!empty($image_size)){
                     $width = $image_size[0];
                     $height = $image_size[1];   

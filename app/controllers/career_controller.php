@@ -13,7 +13,7 @@ class CareerController  extends AppController {
     var $development_model = 'Development';
     var $components = array('Email');
 	function index(){
-		$this->redirect($this->referer(BASE_URL));			
+		$this->redirect($this->referer($this->Session->read('Setting.url')));			
 	}
 	function all($type = ''){
 	    $title = '';
@@ -49,11 +49,11 @@ class CareerController  extends AppController {
             $this->set('body' , $cat_data['Cat']['body']);	
             $this->render($type);	        
         }else{
-            $this->redirect($this->referer(BASE_URL));
+            $this->redirect($this->referer($this->Session->read('Setting.url')));
         }
 	}
 	function item($id = ''){
-	    $base_url = BASE_URL;
+	    $base_url = $this->Session->read('Setting.url');
 	    $model = $this->development_model;	
 		$this->loadModel($model);
 		$item = $this->$model->find(
@@ -122,7 +122,7 @@ class CareerController  extends AppController {
     function draw_development_item($item, $model, $class){
         $item_div = '';
         if(!empty($item)){
-            $base_url = BASE_URL;
+            $base_url = $this->Session->read('Setting.url');
             $item_id = $item[$model]['id']; 
             $item_link = $base_url.'/career/item/'.$item_id;
             $image = '';
@@ -130,11 +130,17 @@ class CareerController  extends AppController {
             if(isset($item[$model]['image'])){
                 $this->mainSmartResizeImage($item[$model]['image']);
                 $image = $base_url.'/img/upload/'.$item[$model]['image'];
-                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$item[$model]['image'];    
-                $image_size = getimagesize($image_path);          
+                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$item[$model]['image'];                           
                 $max_height = 'max-height:100%;';
                 $max_width  = 'max-width:100%;';
                 $style = $max_width;
+				$image_size = array();
+				if(file_exists($image_path)){   
+	            	$image_size = getimagesize($image_path);          
+				}else{
+					$image = DEFAULT_IMAGE;
+					$style = 'width:100%;';
+				} 
                 if(!empty($image_size)){
                     $width = $image_size[0];
                     $height = $image_size[1];   
@@ -166,7 +172,7 @@ class CareerController  extends AppController {
     function draw_career_item($item, $model, $class){
         $item_div = '';
         if(!empty($item)){
-            $base_url = BASE_URL;
+            $base_url = $this->Session->read('Setting.url');
             $item_id = $item[$model]['id']; 
             $image = '';
             $body = $this->remove_unneeded_tags_from_string($item[$model]['description']);
@@ -254,7 +260,7 @@ class CareerController  extends AppController {
             //$this->set('adress', $this->data['vacancy']['adress']);
             $this->set('message', $this->data['vacancy']['message']); 
             $this->set('vacancy', $this->data['vacancy']['title']); 
-            $this->set('url', BASE_URL);    
+            $this->set('url', $settings['Setting']['url']);    
             $this->Email->attachments = array($file_path);                                       
             if ($this->Email->send()){
                 //echo __('<span style="color:#00FF00;">Email has been sent.</span>', true);
@@ -268,9 +274,9 @@ class CareerController  extends AppController {
         if($type == 'notajax'){
             //for arabic
             /*if(isset($this->params['named']['lang'])){
-                $this->redirect(BASE_URL.'/career/all/vacancies/index/lang:'.$this->params['named']['lang']);
+                $this->redirect($this->Session->read('Setting.url').'/career/all/vacancies/index/lang:'.$this->params['named']['lang']);
             }else{*/    
-                $this->redirect(BASE_URL.'/career/all/vacancies');
+                $this->redirect($this->Session->read('Setting.url').'/career/all/vacancies');
             //}
         }elseif($type == 'ajax'){
             $this->autoRender = false;

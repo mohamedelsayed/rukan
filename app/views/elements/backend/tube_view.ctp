@@ -2,7 +2,7 @@
 if(!empty($video)){?>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			updateVideoHits('<?=$video['id'];?>', '<?php BASE_URL;?>');
+			updateVideoHits('<?=$video['id'];?>', '<?php $this->Session->read('Setting.url');?>');
 		});
 	</script>
 	<?php 

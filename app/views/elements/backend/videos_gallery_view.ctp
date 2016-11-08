@@ -44,9 +44,9 @@ if (!empty($gallery)){
                 		class="playsmall"
                 		style="margin-top: <?=$styelMarginTop;?>px; margin-left: <?=$styelMarginLeft;?>px;" 
                 		<?php if($record['file']!=''){ ?>
-                		onclick="playVideo('<?=$record['id'];?>', '<?=$record['title'];?>', '<?=$record['file'];?>', '<?=$record['image'];?>', <?=$width;?>, <?=$height;?>, '<?=BASE_URL;?>', '<?=$delete;?>');"
+                		onclick="playVideo('<?=$record['id'];?>', '<?=$record['title'];?>', '<?=$record['file'];?>', '<?=$record['image'];?>', <?=$width;?>, <?=$height;?>, '<?=$this->Session->read('Setting.url');?>', '<?=$delete;?>');"
                 		<?php }elseif($record['url']!=''){?>
-                		onclick="playTube('<?=$record['id'];?>', '<?=$record['title'];?>', '<?=$record['url'];?>', <?=$width;?>, <?=$height;?>, '<?=BASE_URL;?>', '<?=$delete;?>');"
+                		onclick="playTube('<?=$record['id'];?>', '<?=$record['title'];?>', '<?=$record['url'];?>', <?=$width;?>, <?=$height;?>, '<?=$this->Session->read('Setting.url');?>', '<?=$delete;?>');"
                 		<?php }?>
                 	>
                 	</div>

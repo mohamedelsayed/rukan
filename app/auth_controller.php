@@ -2,7 +2,7 @@
  * @author Author "Mohamed Elsayed"  
  * @author Author Email "me@mohamedelsayed.net"
  * @link http://www.mohamedelsayed.net
- * @copyright Copyright (c) 2015 Programming by "mohamedelsayed.net"
+ * @copyright Copyright (c) 2016 Programming by "mohamedelsayed.net"
  */
 class AuthController extends AppController{	
 	//var $uses = null;	
@@ -78,6 +78,6 @@ class AuthController extends AppController{
         $this->set('google_api_key', $this->google_api_key);
         $this->loadModel('Setting');
         $setting = $this->Setting->read(null, 1);
-		$this->set('base_url', BASE_URL);
+        $this->set('base_url', $setting['Setting']['url']);
 	}
 }

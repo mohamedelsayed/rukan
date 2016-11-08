@@ -100,7 +100,7 @@ class ForumController  extends AuthfrontController {
 					//set data to template 'forgot'.
 					$this->set('member', $member);
 					$this->set('code', $unId);
-					$this->set('url', BASE_URL);
+					$this->set('url', $settings['Setting']['url']);
 					if ($this->Email->send())
 						$this->Session->setFlash(__('Confirmation mail sent. Please check your inbox', true));
 					else 
@@ -127,13 +127,13 @@ class ForumController  extends AuthfrontController {
 							array('Member.id' => $memberId, 'Member.confirm_code' => $code)
 						);
 						$this->Session->setFlash(__('Password changed successfully.', true));				
-						$this->redirect(BASE_URL.'/forum/login');
+						$this->redirect($this->Session->read('Setting.url').'/forum/login');
 					}else 
 						$this->Member->validationErrors['password'] = 'Please enter new password.';	
 				} 
 			}else{
 				$this->Session->setFlash(__('Wrong code.', true));
-				$this->redirect(BASE_URL.'/forum/forget');
+				$this->redirect($this->Session->read('Setting.url').'/forum/forget');
 			}
 			$this->set('title_for_layout', 'Change password');
 			$this->render('change_password');	

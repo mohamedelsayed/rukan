@@ -8,7 +8,7 @@ class ArticleController  extends AppController {
 	var $name = 'Article';
 	var $uses = array('Article');	
 	function index(){
-		$this->redirect($this->referer(BASE_URL));			
+		$this->redirect($this->referer($this->Session->read('Setting.url')));			
 	}
 	function all($tag = ''){
 	    $limit = $this->getPagingLimit();
@@ -98,7 +98,7 @@ class ArticleController  extends AppController {
     function draw_article($article, $class){
         $article_div = '';
         if(!empty($article)){
-            $base_url = BASE_URL;
+            $base_url = $this->Session->read('Setting.url');
             $article_id = $article['Article']['id']; 
             $article_link = $base_url.'/article/item/'.$article_id;
             $article_date = date('F d, Y', strtotime($article['Article']['date'])); 
@@ -107,11 +107,17 @@ class ArticleController  extends AppController {
             if(isset($article['Gal'])){
                 $this->mainSmartResizeImage($article['Gal'][0]['image']);
                 $image = $base_url.'/img/upload/'.$article['Gal'][0]['image'];
-                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$article['Gal'][0]['image'];    
-                $image_size = getimagesize($image_path);          
+                $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$article['Gal'][0]['image'];                      
                 $max_height = 'max-height:100%;';
                 $max_width  = 'max-width:100%;';
                 $style = $max_width;
+				$image_size = array();
+				if(file_exists($image_path)){   
+	            	$image_size = getimagesize($image_path);          
+				}else{
+					$image = DEFAULT_IMAGE;
+					$style = 'width:100%;';
+				} 
                 if(!empty($image_size)){
                     $width = $image_size[0];
                     $height = $image_size[1];   

@@ -11,7 +11,14 @@
             $thumb_image = $base_url.'/img/upload/thumb_'.$value['TeamMember']['image'];
             /*$image = $base_url.'/img/upload/'.$value['TeamMember']['image'];
             $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$value['TeamMember']['image'];    
-            $image_size = getimagesize($image_path);          
+            $style = $max_width;
+			$image_size = array();
+			if(file_exists($image_path)){   
+            	$image_size = getimagesize($image_path);          
+			}else{
+				$image = DEFAULT_IMAGE;
+				$style = 'width:100%;';
+			}        
             if(!empty($image_size)){
                 $width = $image_size[0];
                 $height = $image_size[1];   

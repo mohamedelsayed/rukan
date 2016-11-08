@@ -2,7 +2,7 @@
  * @author Author "Mohamed Elsayed"  
  * @author Author Email "me@mohamedelsayed.net"
  * @link http://www.mohamedelsayed.net
- * @copyright Copyright (c) 2015 Programming by "mohamedelsayed.net"
+ * @copyright Copyright (c) 2016 Programming by "mohamedelsayed.net"
  */
 require_once 'elsayed_db.php';
 class AppController extends Controller {
@@ -12,9 +12,6 @@ class AppController extends Controller {
 	public $clearProSession = true;
     public $lang = 'en';
     public $google_api_key = 'AIzaSyDGGlo0fNATzYKU761Fx-8VAIJDXu-b3QM';
-	//Define facebook AppId & AppSecret
-	//const AppId = '548083845231266';
-	//const AppSecret = 'fb8c98a3a6f182a9c8dfe030f3ad7acb';	
 	function beforeFilter() {
 	    if(isset($this->params['language'])){
 	        $this->lang = $this->params['language'];
@@ -52,6 +49,7 @@ class AppController extends Controller {
         }
         $this->loadModel('Setting');
         $setting = $this->Setting->read(null, 1);
+        $this->set('base_url', BASE_URL);
         $this->set('site_lang', $this->lang);
         $this->set('setting', $setting['Setting']);
         $this->loadModel('Setting');
@@ -59,7 +57,6 @@ class AppController extends Controller {
         $this->set("minYearValue",$settings['Setting']['minimum_year']);
         $this->set("maxYearValue",$settings['Setting']['maximum_year']);
         $this->set('google_api_key', $this->google_api_key);
-		$this->set('base_url', BASE_URL);
 	}	
 	function afterFilter(){
 		//$this->Session->write('dontPopup', true);
@@ -119,7 +116,7 @@ class AppController extends Controller {
 			$this->loadModel('Setting');
 			$settings = $this->Setting->read(null, 1);
 			$limit = $settings['Setting']['newsletter_limit'];		
-			$tempDomain = explode("/", BASE_URL);		
+			$tempDomain = explode("/", $settings['Setting']['url']);		
 			$currentDomain = $tempDomain[0]."//".$tempDomain[2]."/app/webroot/";
 			$this->set('currentDomain', $currentDomain);
 			$this->loadModel('Queue');
@@ -250,7 +247,7 @@ class AppController extends Controller {
 				$settings = $this->Setting->read(null, 1);				
 				$maintenance_mode = $settings['Setting']['maintenance_mode'];
 				if($maintenance_mode == 1 && $this->action != 'maintenancemode'){
-					$this->redirect(BASE_URL.'/maintenance');
+					$this->redirect($this->Session->read('Setting.url').'/maintenance');
 				}		
 			}
 		}
@@ -348,7 +345,7 @@ class AppController extends Controller {
     function draw_image_box($id = 0, $path = '', $cover = 0, $caption = ''){
         $tpl = '<div class="image_wrap" data-img-id="{{img_id}}">
             <div class="img_item">
-            <img src="'.BASE_URL.'/{{img_path}}" style="max-width: 250px; max-height: 250px;">
+            <img src="'.$this->Session->read('Setting.url').'/{{img_path}}" style="max-width: 250px; max-height: 250px;">
             </div>
             <input type="hidden" name="img_path[{{img_id}}]" value="{{img_path}}" />
             <div class="caption">

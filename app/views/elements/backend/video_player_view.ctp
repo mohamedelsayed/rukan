@@ -2,16 +2,16 @@
 	if(!empty($video)){?>
     	<script type="text/javascript">
         	$(document).ready(function(){
-				updateVideoHits('<?=$video['id'];?>', '<?=BASE_URL;?>');
+				updateVideoHits('<?=$video['id'];?>', '<?=$this->Session->read('Setting.url');?>');
 			});
         </script>
 		<?php    
 		if($this->action == 'edit')$delete = true; else $delete = false;
-		//$imagePath = ($video['image']!='')?BASE_URL.'/app/webroot/img/upload/'.$video['image']:BASE_URL.'/app/webroot/img/backend/no_image.jpeg';
-		$imagePath = BASE_URL.'/app/webroot/img/upload/'.$video['image'];
-		$videoPath = BASE_URL.'/app/webroot/files/upload/'.$video['file'];
-		$src = BASE_URL.'/app/webroot/files/flv_player/player.swf';
-		$skinPath = BASE_URL.'/app/webroot/files/flv_player/skins/fs40/fs40.xml'; 
+		//$imagePath = ($video['image']!='')?$this->Session->read('Setting.url').'/app/webroot/img/upload/'.$video['image']:$this->Session->read('Setting.url').'/app/webroot/img/backend/no_image.jpeg';
+		$imagePath = $this->Session->read('Setting.url').'/app/webroot/img/upload/'.$video['image'];
+		$videoPath = $this->Session->read('Setting.url').'/app/webroot/files/upload/'.$video['file'];
+		$src = $this->Session->read('Setting.url').'/app/webroot/files/flv_player/player.swf';
+		$skinPath = $this->Session->read('Setting.url').'/app/webroot/files/flv_player/skins/fs40/fs40.xml'; 
 		echo '<div>'.$video['title'].'</div>';		
 		echo "<object>
 				<embed

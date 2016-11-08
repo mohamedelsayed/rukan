@@ -4,11 +4,17 @@
         $div_ratio = 180/180;
         if(trim($value['Testimonial']['image']) != ''){
             $image = $base_url.'/img/upload/'.$value['Testimonial']['image'];
-            $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$value['Testimonial']['image'];    
-            $image_size = getimagesize($image_path);          
+            $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$value['Testimonial']['image'];                    
             $max_height = 'max-height:100%;';
             $max_width  = 'max-width:100%;';
             $style = $max_width;
+			$image_size = array();
+			if(file_exists($image_path)){   
+            	$image_size = getimagesize($image_path);          
+			}else{
+				$image = DEFAULT_IMAGE;
+				$style = 'width:100%;';
+			} 
             if(!empty($image_size)){
                 $width = $image_size[0];
                 $height = $image_size[1];   

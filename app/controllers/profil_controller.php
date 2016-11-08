@@ -12,7 +12,7 @@ class ProfilController  extends AuthController {
 	var $components = array('Email');
 	
 	function index(){
-		$this->redirect(BASE_URL.'/forget-password');
+		$this->redirect($this->Session->read('Setting.url').'/forget-password');
 	}	
 	//forget password.
 	function forgot($memberId=null, $code=null){
@@ -45,7 +45,7 @@ class ProfilController  extends AuthController {
 					//set data to template 'forgot'.
 					$this->set('member', $member);
 					$this->set('code', $unId);
-					$this->set('url', BASE_URL);
+					$this->set('url', $settings['Setting']['url']);
 					if ($this->Email->send())
 						$this->Session->setFlash(__('Confirmation mail sent. Please check your inbox', true));
 					else 
@@ -72,14 +72,14 @@ class ProfilController  extends AuthController {
 							array('User.id' => $memberId, 'User.confirm_code' => $code)
 						);
 						$this->Session->setFlash(__('Password changed successfully.', true));				
-						$this->redirect(BASE_URL.'/me-admin');
+						$this->redirect($this->Session->read('Setting.url').'/me-admin');
 					}else 
 						$this->User->validationErrors['password'] = 'Please enter new password.';	
 				} 
 			}
 			else{
 				$this->Session->setFlash(__('Wrong code.', true));
-				$this->redirect(BASE_URL.'/forget-password');
+				$this->redirect($this->Session->read('Setting.url').'/forget-password');
 			}
 			$this->set('title_for_layout', 'Change password');
 			$this->render('change_password');	

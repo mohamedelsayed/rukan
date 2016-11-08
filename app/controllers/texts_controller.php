@@ -10,11 +10,11 @@ class TextsController extends AppController {
 	var $components = array('Email');
 	//var $helpers = array('GoogleMapV3'); 	
 	function index(){
-		$this->redirect($this->referer(BASE_URL));		
+		$this->redirect($this->referer($this->Session->read('Setting.url')));		
 	}	
 	function display($id = null, $title = null){
 		if(!$id){
-			$this->redirect($this->referer(BASE_URL));
+			$this->redirect($this->referer($this->Session->read('Setting.url')));
 		}
 		$content = $this->Content->read(null, $id);
 		$this->set('title_for_layout', $content['Content']['title']);
@@ -66,7 +66,7 @@ class TextsController extends AppController {
 			$this->set('email', $this->data['Contactus']['email']);
 			//$this->set('adress', $this->data['Contactus']['adress']);
 			$this->set('message', $this->data['Contactus']['message']);	
-			$this->set('url', BASE_URL);			     		
+			$this->set('url', $settings['Setting']['url']);			     		
 			if ($this->Email->send()){
 				//echo __('<span style="color:#00FF00;">Email has been sent.</span>', true);
 				//echo __('Email has been sent.', true);
@@ -79,9 +79,9 @@ class TextsController extends AppController {
 		if($type == 'notajax'){
 			//for arabic
 			/*if(isset($this->params['named']['lang'])){
-				$this->redirect(BASE_URL.'/contact-us/index/lang:'.$this->params['named']['lang']);
+				$this->redirect($this->Session->read('Setting.url').'/contact-us/index/lang:'.$this->params['named']['lang']);
 			}else{*/	
-				$this->redirect(BASE_URL.'/contact-us');
+				$this->redirect($this->Session->read('Setting.url').'/contact-us');
 			//}
 		}elseif($type == 'ajax'){
 			$this->autoRender = false;
@@ -127,7 +127,7 @@ class TextsController extends AppController {
             $this->set('email', $this->data['sendmail']['email']);
             //$this->set('adress', $this->data['sendmail']['adress']);
             $this->set('message', $this->data['sendmail']['message']); 
-            $this->set('url', BASE_URL);                     
+            $this->set('url', $settings['Setting']['url']);                     
             if ($this->Email->send()){
                 //echo __('<span style="color:#00FF00;">Email has been sent.</span>', true);
                 //echo __('Email has been sent.', true);
@@ -140,9 +140,9 @@ class TextsController extends AppController {
         if($type == 'notajax'){
             //for arabic
             /*if(isset($this->params['named']['lang'])){
-                $this->redirect(BASE_URL.'/contact-us/index/lang:'.$this->params['named']['lang']);
+                $this->redirect($this->Session->read('Setting.url').'/contact-us/index/lang:'.$this->params['named']['lang']);
             }else{*/    
-                $this->redirect(BASE_URL.'/');
+                $this->redirect($this->Session->read('Setting.url').'/');
             //}
         }elseif($type == 'ajax'){
             $this->autoRender = false;

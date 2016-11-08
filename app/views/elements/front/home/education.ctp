@@ -32,7 +32,14 @@
         if(file_exists($image_path) && is_file($image_path)){
             $resize->smartResizeImage($item['image']);
             $image = $base_url.'/img/upload/'.$item['image'];
-            $image_size = getimagesize($image_path);                                  
+            $style = $max_width;
+			$image_size = array();
+			if(file_exists($image_path)){   
+            	$image_size = getimagesize($image_path);          
+			}else{
+				$image = DEFAULT_IMAGE;
+				$style = 'width:100%;';
+			}                               
             if(!empty($image_size)){
                 $width = $image_size[0];
                 $height = $image_size[1];                      

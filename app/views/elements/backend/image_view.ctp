@@ -1,6 +1,6 @@
 <script type="text/javascript">
 	$(document).ready(function() {
-		$(".lightbox").lightBox('<?php echo BASE_URL; ?>');
+		$(".lightbox").lightBox('<?php echo $this->Session->read('Setting.url'); ?>');
 	});
 </script>
 <?php
@@ -34,7 +34,7 @@
 		}
 		echo $this->Html->link(
 			$this->Html->image($thumbPath, array('title'=> __('Click to enlarge', true), 'border' => '0', 'width'=>$width, 'height'=>$height)), 
-			BASE_URL.'/img/'.$imagePath,
+			$this->Session->read('Setting.url').'/img/'.$imagePath,
 			array('target' => '_blank', 'escape' => false, 'class'=>'lightbox', 'title'=>isset($image['caption'])?$image['caption']:'', 'rel'=>'group1'));
 		if($delete){			
 			echo '<div class = "delete">';
