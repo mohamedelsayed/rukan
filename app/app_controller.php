@@ -247,7 +247,7 @@ class AppController extends Controller {
 				$settings = $this->Setting->read(null, 1);				
 				$maintenance_mode = $settings['Setting']['maintenance_mode'];
 				if($maintenance_mode == 1 && $this->action != 'maintenancemode'){
-					$this->redirect($this->Session->read('Setting.url').'/maintenance');
+					$this->redirect(BASE_URL.'/maintenance');
 				}		
 			}
 		}
@@ -345,7 +345,7 @@ class AppController extends Controller {
     function draw_image_box($id = 0, $path = '', $cover = 0, $caption = ''){
         $tpl = '<div class="image_wrap" data-img-id="{{img_id}}">
             <div class="img_item">
-            <img src="'.$this->Session->read('Setting.url').'/{{img_path}}" style="max-width: 250px; max-height: 250px;">
+            <img src="'.BASE_URL.'/{{img_path}}" style="max-width: 250px; max-height: 250px;">
             </div>
             <input type="hidden" name="img_path[{{img_id}}]" value="{{img_path}}" />
             <div class="caption">

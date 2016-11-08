@@ -78,6 +78,6 @@ class AuthController extends AppController{
         $this->set('google_api_key', $this->google_api_key);
         $this->loadModel('Setting');
         $setting = $this->Setting->read(null, 1);
-        $this->set('base_url', $setting['Setting']['url']);
+		$this->set('base_url', BASE_URL);
 	}
 }
