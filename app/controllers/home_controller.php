@@ -76,14 +76,23 @@ class HomeController  extends AppController {
             }
         }
         $this->set('agendas' , $agendas);
-        $this->loadModel('Cat');
+        /*$this->loadModel('Cat');
         $education_cat = $this->Cat->find(
             'first', array(
                 'conditions' => array('Cat.approved' => 1, 'Cat.id' => 3),
                 'order' => array('Cat.weight' => 'ASC','Cat.id'=>'DESC')
             )           
         );
-        $this->set('education_cat' , $education_cat);
+        $this->set('education_cat' , $education_cat);*/
+        $this->loadModel('Value');
+        $values = $this->Value->find(
+            'all', array(
+                'conditions' => array('Value.approved' => 1),
+                'order' => array('Value.weight' => 'ASC', 'Value.id'=>'DESC'),
+                //'limit' => 4
+            )           
+        );
+        $this->set('values_data' , $values);      
 	}
 	function newsletter(){	
 		$error = '';

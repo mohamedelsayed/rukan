@@ -26,8 +26,7 @@ class PageController  extends AppController {
             )           
         );        
         if(isset($parent_cat['ChildCat']) && $childid == 0){
-            if(!empty($parent_cat['ChildCat'])){
-               
+            if(!empty($parent_cat['ChildCat'])){	               
                 if(isset($parent_cat['ChildCat'][0]['id'])){
                     $childCat_0_id = $parent_cat['ChildCat'][0]['id'];
                     $in_url = $base_url.'/page/show/'.$cat_id.'/'.$childCat_0_id;
