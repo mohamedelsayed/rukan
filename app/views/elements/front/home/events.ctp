@@ -1,5 +1,5 @@
 <?php if(!empty($events)){?>
-    <div class="write_top"><?php echo __('UPCOMING EVENTS', true);?></div>
+    <div class="write_top"><?php echo __('EVENTS', true);?></div>
     <div class="data_comp1">
         <?php $i = 0;
         foreach ($events as $key => $event) {

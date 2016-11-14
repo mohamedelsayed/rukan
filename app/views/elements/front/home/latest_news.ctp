@@ -81,7 +81,5 @@
         setInterval("$('#jcarousel').jcarousel('scroll', '+=1')", 15000)
     });
     </script>
-    <div class="border_write">
-        <img src="<?php echo $base_url.'/img/front/';?>border.jpg"/>
-    </div>
+    <div class="line_border"></div>
 <?php }?>

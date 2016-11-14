@@ -45,7 +45,12 @@
             <?php }?>
         <?php }?>
     </div>
-    <div class="border_write">
-        <img src="<?php echo $base_url.'/img/front/';?>border.jpg"/>
+    <div class="more_events_button_out">
+        <a href="<?php echo $base_url.'/gallery/all';?>">
+            <div class="more_events_button white_green_button">
+                <?php echo __('More Albums', true);?>
+            </div>
+        </a>
     </div>
+    <div class="line_border"></div>
 <?php }?>
