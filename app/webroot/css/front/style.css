@@ -826,7 +826,6 @@ header{
 	float: left;
 	width: 100%;
 	text-align:center;
-    margin-top: 1%;
 }
 .adders_face_s a{
 	padding-left: 15px;
@@ -1621,8 +1620,8 @@ ul.tabs2 li.current{
 .left_bot{
 	color: #ffffff;
     float: left;
-    
-    font-size: 15px;
+    font-family: Lato;
+    font-size: 16px;
     margin-bottom: 3%;
     margin-top: 1%;
     text-align: center;

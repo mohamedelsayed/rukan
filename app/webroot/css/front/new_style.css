@@ -165,9 +165,7 @@ ul.tabs li {
 footer{
 	background-image: url("../../img/front/border-bottom.png");
 	background-repeat: repeat-x;
-	/*height: 192px;*/
 	padding-top: 35px;
-	padding-bottom: 18px;
 }
 .menu_grop a{
 	min-width: 38px;
@@ -181,8 +179,8 @@ footer{
 	margin-top: 10px;
 }
 .adders_face_s{
-	height: 28px;
-	margin-bottom: 2%;
+	height: 27px;
+	margin-bottom: 1%;
 }
 .adders_face_s img{
 	height: 100%;
@@ -685,6 +683,7 @@ ul.tabs3 li a:hover{
 }
 .footer_accreditation {
 	margin: auto;
+	display: none;
 }
 .footer_accreditation img {
 	height: 50px;
