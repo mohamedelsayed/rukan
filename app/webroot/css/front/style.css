@@ -315,17 +315,15 @@ header{
 	color:#404041;
 	width: 700px;
 }
-.wrie_pic{
-	color: #ffffff;
+.home_word_widgets2{
+	color: #252525;
 	background-image:url(../../img/front/border-slider.jpg);
 	background-repeat: repeat-x;
     float: left;
-    font-family: OpenSans-Light;
+    font-family: Montserrat-Light;
     font-size: 38px;
-    margin-bottom: 10%;
-    margin-left: 12%;
-    margin-top: 20%;
-    position: absolute;
+	padding-top: 60px;
+	height: 180px;
     text-align: center;
     text-decoration: none;
 }
