@@ -52,12 +52,12 @@ ul.tabs li{
 .jcarousel {
     position: relative;
     overflow: hidden;   
-    width: 1200px; 
+    width: 1073px; 
 }
 .jcarousel li {
     float: left;
     display: inline;
-    width: 1200px;
+    width: 1073px;
 }
 .jcarousel ul{
     width: 50000px;
@@ -75,7 +75,7 @@ a.jcarousel-next{
 	z-index: 60;
 	float: right;
 	margin-top: 100px;
-	margin-left: 1220px;
+	margin-left: 1158px;
 	cursor: pointer;
 }
 a.jcarousel-prev{	
@@ -86,13 +86,14 @@ a.jcarousel-prev{
 	width: 27px;
 	z-index: 60;
 	margin-top: 100px;
-	margin-left: -50px;
+	margin-left: 0px;
 	cursor: pointer;
 }
 .jcarousel-wrapper{
 	/*width:100%;*/
     float: left;
     position: absolute;
+    margin-left: 62px;
 }
 .home_latest_news{
 	width: 100%;
