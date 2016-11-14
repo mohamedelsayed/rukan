@@ -7,14 +7,14 @@
                 <a class="menu_smill" href="#"> عربي</a>
             </div>*/?>
             <div class="men_face">
-                <a target="_blank" href="<?php echo $setting['facbook_link'];?>">
-                    <img class="Twitter" src="<?php echo $base_url.'/img/front/';?>face.png" />
+                <a target="_blank" href="<?php echo $setting['linkedin_link'];?>">
+                    <img class="Twitter" src="<?php echo $base_url.'/img/front/';?>in.png" />
                 </a>
                 <a target="_blank" href="<?php echo $setting['twitter_link'];?>">
                     <img class="Twitter" src="<?php echo $base_url.'/img/front/';?>Twitter.png" />
                 </a>
-                <a target="_blank" href="<?php echo $setting['linkedin_link'];?>">
-                    <img class="Twitter" src="<?php echo $base_url.'/img/front/';?>in.png" />
+                <a target="_blank" href="<?php echo $setting['facbook_link'];?>">
+                    <img class="Twitter" src="<?php echo $base_url.'/img/front/';?>face.png" />
                 </a>
             </div>
             <div class="input">

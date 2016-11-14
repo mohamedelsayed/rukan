@@ -2,7 +2,7 @@
     <div class="main-footer">
         <div class="top_grop">
             <div class="adders_grop">
-                <img src="<?php echo $base_url.'/img/front/ethos_footer_logo.png';?>" />
+                <img src="<?php echo $base_url.'/img/front/footer_logo.png';?>" />
             </div>
             <?php /*<div class="top_grop" style="margin-bottom: 10px;">
                 <div class="newsletter_footer_div">
