@@ -52,12 +52,12 @@ ul.tabs li{
 .jcarousel {
     position: relative;
     overflow: hidden;   
-    width: 960px; 
+    width: 1200px; 
 }
 .jcarousel li {
     float: left;
     display: inline;
-    width: 960px;
+    width: 1200px;
 }
 .jcarousel ul{
     width: 50000px;
@@ -75,7 +75,7 @@ a.jcarousel-next{
 	z-index: 60;
 	float: right;
 	margin-top: 100px;
-	margin-left: 980px;
+	margin-left: 1220px;
 	cursor: pointer;
 }
 a.jcarousel-prev{	
