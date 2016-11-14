@@ -46,8 +46,8 @@
 					                </a>
 					            </div>
 					            <div class="home_widget_value_title">
-	`				                <?php echo $value['Value']['title'];?>
-					            </div>
+					            	<?php echo $value['Value']['title'];?>
+				            	</div>
 					            <?php /*<div class="adders_about_smill2">
 					                <?php $body = $this->element('front'.DS.'remove_unneeded_tags_from_string', array('string' => $value['Value']['body']));
 					                $body = $this->element('front'.DS.'string_format_view', array('str' => $body, 'val' => 100, 'type' => 'wordsCut'));
