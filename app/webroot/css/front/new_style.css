@@ -100,7 +100,7 @@ a.jcarousel-prev{
 	float: left;
 }
 .home_latest_news, .jcarousel{
-	height: 260px;
+	height: 325px;
 }
 a.jcarousel-next:hover{
 	background-image: url(../../img/front/arrow_hover.png);	

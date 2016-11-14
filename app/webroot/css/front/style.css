@@ -1495,9 +1495,11 @@ ul.tabs2 li.current{
     width: 91.5%;
 }
 .img_home{
-	/*border: 2px solid #adadad;*/
+	margin-top: -36px;
     float: right;
-    height: 175px;
+    height: 282px;
+	border-radius: 50%;
+	width: 282px !important;
 }
 .bck{
 	float:left;
