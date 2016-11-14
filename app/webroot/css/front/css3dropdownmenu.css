@@ -43,7 +43,7 @@ http://vladimirkudinov.com
 /* Links */
 .menu li a {
 	display: block;
-	padding: 0 6px 0 5px;
+	padding: 0 15px;
 	/*padding: 0 14px;
 	margin: 6px 0;
 	line-height: 28px;
@@ -67,7 +67,7 @@ http://vladimirkudinov.com
 /* Sub Menu */
 .menu ul {
 	position: absolute;
-	top: 60px;
+	top: 74px;
 	left: 0;
 	opacity: 0;	
 	background: #ddd5d1;
@@ -93,7 +93,7 @@ http://vladimirkudinov.com
 	transition: height .25s ease .1s;
 }
 .menu li:hover > ul li {
-	height: 36px;
+	height: 46px;
 	overflow: visible;
 	padding: 0;
 }

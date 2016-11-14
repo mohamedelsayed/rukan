@@ -41,7 +41,7 @@
     overflow: hidden;
 }
 .wrie_pic{
-	width: 54%;
+	width: 100%;
 	margin-left: 10%;
 	margin-right: 10%;
 	font-size: 35px;
@@ -159,11 +159,12 @@ ul.tabs li {
 	height: 27px;
 }
 .menu a.selected{
-	background-color: #f5851f;	
+	background-color: #e32c4d;	
 	/*font-weight: bold;*/	
 }
 footer{
-	background-color: #067b36;
+	background-image: url("../../img/front/border-bottom.png");
+	background-repeat: repeat-x;
 	/*height: 192px;*/
 	padding-top: 35px;
 	padding-bottom: 18px;
@@ -684,7 +685,6 @@ ul.tabs3 li a:hover{
 }
 .footer_accreditation {
 	margin: auto;
-    width: 960px;   
 }
 .footer_accreditation img {
 	height: 50px;
