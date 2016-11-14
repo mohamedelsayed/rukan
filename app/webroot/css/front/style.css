@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @font-face{
 font-family: Helvetica Neue LT Std;
 src: url(../font/HelveticaNeueLTStd-Cn.otf);
@@ -7,7 +9,7 @@ font-family: HelveticaLTStd-Light;
 src: url(../font/HelveticaLTStd-Light.otf);
 }
 @font-face{
-font-family: OpenSans-Regular;
+
 src: url(../font/OpenSans-Regular.ttf);
 }
 @font-face{
@@ -21,6 +23,7 @@ src: url(../font/OpenSans-Bold.ttf);
 body {
     margin: 0px;
 	padding: 0px;
+	font-family: Montserrat;
 }
 li {
     display: table-cell;
@@ -177,7 +180,7 @@ header{
 	color: #414141;
     float: left;
     font-family: Lato;
-    font-size: 17px;
+    font-size: 21px;
     padding: 0 6px 0 5px;
     line-height: 75px;
     text-align: center;
@@ -200,7 +203,7 @@ header{
 .men_e{
 	float: right;
 	margin-top: 35px;
-	font-family: OpenSans-Regular;
+	
 	font-size: 21.72px;
 	text-decoration:none;
 	color: #404041;
@@ -224,7 +227,7 @@ header{
     width: 22%;
 }
 .menu_smill{
-	font-family: OpenSans-Regular;
+	
 	font-size: 20px;
 	text-decoration:none;
 	padding-left: 4px;
@@ -289,7 +292,7 @@ header{
 .top_wriew{
 	color: #58595b;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 25px;
     padding-top: 10px;;
     text-align: center;
@@ -307,7 +310,7 @@ header{
 }
 .t_right_2{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 18px;
 	text-decoration:none;
 	color:#404041;
@@ -329,7 +332,7 @@ header{
 }
 .top_wrie_b{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19.5px;
 	text-decoration:none;
 	padding-left: 10px;
@@ -339,7 +342,7 @@ header{
 }
 .top__b{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-decoration:none;
 	padding-left: 10px;
@@ -485,7 +488,7 @@ header{
 	margin-top: 20px;
 	width: 100%;
 	text-align: center;
-	font-family: OpenSans-Regular;
+	
 	font-size: 40px;
 	text-decoration:none;
 	color: #8c8c8c;
@@ -633,7 +636,7 @@ header{
 .top_see{
 	float:right;
 	margin-bottom: 30px;
-	font-family: OpenSans-Regular;
+	
 	font-size: 22px;
 	text-decoration:none;
 	color: #ff5953;
@@ -846,8 +849,8 @@ header{
     padding-top: 1%;*/
 }
 .menu_grop a{
-	font-family: OpenSans-Regular;
-	font-size: 14px;
+	font-family: Lato;
+	font-size: 21px;
 	text-decoration:none;
 	line-height: 30px;
 	padding:0 8px;
@@ -871,7 +874,7 @@ ul.tabs li{
 	border-left: 1px solid #8c8c8c;
 	cursor: pointer;
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 25px;
 }
 ul.tabs li:first-child{
@@ -888,7 +891,7 @@ ul.tabs li.current{
 	/*height: 37px;*/
 	background: #8c8c8c;
 	color: #ffffff;
-	font-family: OpenSans-Regular;
+	
 	font-size: 25px;
 	text-decoration:none;
 }
@@ -926,7 +929,7 @@ ul.tabs li.current{
 }
 .top_con_2{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 35px;
 	text-decoration:none;
 	color: #8c8c8c;
@@ -956,7 +959,7 @@ ul.tabs li.current{
 }
 .top_a_con_3{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 	text-decoration:none;
 	color: #000000;
@@ -964,7 +967,7 @@ ul.tabs li.current{
 }
 .bot_tom{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16.89px;
 	text-decoration:none;
 	color: #535353;
@@ -972,7 +975,7 @@ ul.tabs li.current{
 }
 .Arab{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: #ee4640;
@@ -982,7 +985,7 @@ ul.tabs li.current{
 }
 .Arab_2{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: 7d7d7d;
@@ -1056,7 +1059,7 @@ ul.tabs li.current{
 }
 .s_right_2{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 18px;
 	text-decoration:none;
 	color: #3a3a3a;
@@ -1065,7 +1068,7 @@ ul.tabs li.current{
 }
 .s_right{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 35px;
 	text-decoration:none;
 	color: #000000;
@@ -1078,7 +1081,7 @@ ul.tabs li.current{
     border-radius: 10px;
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 35px;
     margin-left: 31.5%;
     padding-bottom: 1%;
@@ -1089,16 +1092,16 @@ ul.tabs li.current{
 }
 .bott_more{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 25px;
 	text-decoration:none;
-	color: #067b36;
+	color: #e32d4e;
 	width: 60%;
 	padding-top: 1%;
 }
 .top_con_3{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 25px;
 	text-decoration:none;
 	color: #9b9b9b;
@@ -1118,7 +1121,7 @@ ul.tabs li.current{
 .adders_write{
     color: #868686;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     margin: 0 0 0 0;
     text-decoration: none;
@@ -1127,7 +1130,7 @@ ul.tabs li.current{
 .bottm_write{
     color: #ffffff;
     float: right;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     margin: 3% 0 0;
     text-decoration: none;
@@ -1136,7 +1139,7 @@ ul.tabs li.current{
 .bottm_apply{
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 20px;
     margin: 1.6% 0 0 3%;
     text-decoration: none;
@@ -1145,7 +1148,7 @@ ul.tabs li.current{
 .bottm_reed{
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 20px;
     margin: 3% 0 0 4%;
     text-decoration: none;
@@ -1153,7 +1156,7 @@ ul.tabs li.current{
 }
 .write_vacancies{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 20px;
 	text-decoration:none;
 	margin: 0% 0 0 3%;
@@ -1163,7 +1166,7 @@ ul.tabs li.current{
 }
 .adders_vacancies{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 28px;
 	text-decoration:none;
 	margin: 2% 0 0 3%;
@@ -1173,7 +1176,7 @@ ul.tabs li.current{
 }
 .adders_careers{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 27px;
 	text-decoration:none;
 	margin: 0% 0 0 3%;
@@ -1183,7 +1186,7 @@ ul.tabs li.current{
 }
 .adders_about_w{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 33px;
 	text-decoration:none;
 	margin: 0% 0 0 0%;
@@ -1192,7 +1195,7 @@ ul.tabs li.current{
 }
 .adders_about_s{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 33px;
 	text-decoration:none;
 	color: #8c8c8c;
@@ -1200,7 +1203,7 @@ ul.tabs li.current{
 }
 .adders_about_smill_w{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 22px;
 	text-decoration:none;
 	color: #2f2f2f;
@@ -1210,7 +1213,7 @@ ul.tabs li.current{
 
 .adders_about{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 35px;
 	text-decoration:none;
 	color: #02f2f2f;
@@ -1221,7 +1224,7 @@ ul.tabs li.current{
 	color: #414141;
 	margin-left: 4%;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 16.4px;
 	text-align: justify;
     padding: 3.3% 0 0;
@@ -1230,7 +1233,7 @@ ul.tabs li.current{
 }
 .adders_about_smill{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 22px;
 	text-decoration:none;
 	color: #2f2f2f;
@@ -1239,7 +1242,7 @@ ul.tabs li.current{
 }
 .adders_about2{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 35px;
 	text-decoration:none;
 	color: #8c8c8c;
@@ -1250,7 +1253,7 @@ ul.tabs li.current{
 .adders_about_smill2{
 	color: #2f2f2f;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 16px;
     padding: 7% 10% 0;
     text-align: inherit;
@@ -1276,7 +1279,7 @@ ul.tabs2 li{
 	padding: 0 0 0 1%;
 	cursor: pointer;
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 }
 ul.tabs2 li img{
@@ -1287,7 +1290,7 @@ ul.tabs2 li img{
 ul.tabs2 li.current{
 	/*height: 37px;*/
 	color: #8b8b8b;
-	font-family: OpenSans-Regular;
+	
 	font-size: 22px;
 	text-decoration:none;
 }
@@ -1350,7 +1353,7 @@ ul.tabs2 li.current{
 
 .bot_school{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-decoration:none;
 	color: #58595b;
@@ -1361,7 +1364,7 @@ ul.tabs2 li.current{
 
 .top_con_iddle{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 31px;
 	text-decoration:none;
 	color: #58595b;
@@ -1376,7 +1379,7 @@ ul.tabs2 li.current{
 }
 .top_con5{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 18px;
 	text-decoration:none;
 	color: #535353;
@@ -1386,7 +1389,7 @@ ul.tabs2 li.current{
 }
 .top_co8{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 	text-decoration:none;
 	color: #535353;
@@ -1397,7 +1400,7 @@ ul.tabs2 li.current{
 .top_con_6{
 	float:left;
 	text-align:justify;
-	font-family: OpenSans-Regular;
+	
 	font-size: 18px;
 	text-decoration:none;
 	margin-top: 32px;
@@ -1438,7 +1441,7 @@ ul.tabs2 li.current{
 .data_write{
     color: #58595b;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size:  31px;
 	margin-left: 20px;
 	width: 70%;
@@ -1447,7 +1450,7 @@ ul.tabs2 li.current{
 .wret_data{
     color: #58595b;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 17px;
     margin-left: 4%;
     margin-top: 1.7%;
@@ -1474,7 +1477,7 @@ ul.tabs2 li.current{
 	height: 50px;
 	padding-left: 26px;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 30px;
     margin-top: -70px;
     padding-top: 16px;
@@ -1485,7 +1488,7 @@ ul.tabs2 li.current{
 	background-color: #8c8c8c;
     color: #ffffff;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 30px;
     height: 50px;
     margin-top: -24%;
@@ -1511,7 +1514,7 @@ ul.tabs2 li.current{
 	float:left;
 	width:100%;
 	padding-bottom: 25px;
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: #4e4e4e;
@@ -1526,7 +1529,7 @@ ul.tabs2 li.current{
 	background:url(../../img/front/img_f2.jpg) no-repeat scroll left top;
 	padding-left: 30px;
 	padding-bottom: 20px;
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: #7d7d7d;
@@ -1536,14 +1539,14 @@ ul.tabs2 li.current{
 		
 }
 .faqquestioncurrent{
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: #ee4640;
 	background:url(../../img/front/img_f.jpg) no-repeat scroll left top;
 }
 .faqquestion:hover{
-	font-family: OpenSans-Regular;
+	
 	font-size: 23.63px;
 	text-decoration:none;
 	color: #ee4640;
@@ -1618,7 +1621,7 @@ ul.tabs2 li.current{
 .left_bot{
 	color: #ffffff;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 15px;
     margin-bottom: 3%;
     margin-top: 1%;
@@ -2521,7 +2524,7 @@ input.file{
 }
 .left_addret{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 17px;
 	text-decoration:none;
 	color: #535353;
@@ -2540,7 +2543,7 @@ input.file{
 
 .addert{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-decoration:none;
 	color: #2f2f2f;
@@ -2549,7 +2552,7 @@ input.file{
 }
 .adderss_smll{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 	text-decoration:none;
 	color: #3a3a3a;
@@ -2564,7 +2567,7 @@ input.file{
 }
 .adderss_contact{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 27px;
 	margin-bottom: 5.5%;
 	text-decoration:none;
@@ -2573,7 +2576,7 @@ input.file{
 }
 .adderss_left{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 	text-decoration:none;
 	color: #848484;
@@ -2583,7 +2586,7 @@ input.file{
 }
 .adderss_left_n{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 13px;
 	text-decoration:none;
 	color: #848484;
@@ -2597,7 +2600,7 @@ input.file{
     margin-top: 5%;
     width: 100%;
 	color: #6a6a6a;
-    font-family: OpenSans-Regular;
+    
     font-size: 15px;
 	text-decoration: none;
 }
@@ -2630,7 +2633,7 @@ input.file{
 	background-color: #8c8c8c;
     color: #ffffff;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 30px;
     height: 50px;
     margin-top: -26%;
@@ -2645,7 +2648,7 @@ input.file{
     border-radius: 10px;
     float: left;
 	color: #8c8c8c;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     margin-top: 4%;
     padding: 1.5% 1%;
@@ -2658,7 +2661,7 @@ input.file{
     border-radius: 10px;
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     margin-top: 19%;
     padding: 1.5% 1%;
@@ -2671,7 +2674,7 @@ input.file{
     border-radius: 10px;
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     margin-top: 4%;
     padding: 1.5% 1%;
@@ -2682,7 +2685,7 @@ input.file{
 
 .adderss_samill{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 16px;
 	margin-bottom: 4%;
 	text-decoration:none;
@@ -2787,7 +2790,7 @@ input.file{
     float: left;
 	text-align:center;
 	margin-left: 41%;
-    font-family: OpenSans-Regular;
+    
     font-size: 30px;
     text-decoration: none;
 }
@@ -2806,7 +2809,7 @@ input.file{
 .date_witer{
 	color: #7e7e7e;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 13px;
     margin-left: 1%;
     margin-top: 0.5%;
@@ -2815,7 +2818,7 @@ input.file{
 .data_reed{
     color: #8c8c8c;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 20px;
     margin: 3% 0 3%;
     text-decoration: none;
@@ -2824,7 +2827,7 @@ input.file{
 .data_smill{
 	color: #414141;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 16.4px;
 	text-align: justify;
     padding: 3.3% 0 0;
@@ -2833,7 +2836,7 @@ input.file{
 }
 .adders_news{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 30px;
 	text-decoration:none;
 	margin: 3% 0 2%;
@@ -2842,7 +2845,7 @@ input.file{
 }
 .adders_facilities_smill{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 22px;
 	text-decoration:none;
 	color: #2f2f2f;
@@ -2853,7 +2856,7 @@ input.file{
 .adders_education_smill{
 	color: #2f2f2f;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     padding: 4% 0 0;
     text-decoration: none;
@@ -2876,7 +2879,7 @@ input.file{
 .adders_student_smill{
 	color: #2f2f2f;
     float: left;
-    font-family: OpenSans-Regular;
+    
     font-size: 22px;
     padding: 4% 0 0;
     text-decoration: none;
@@ -2913,7 +2916,7 @@ ul.tabs3 li{
 	padding: 1% 4.1%;
 	cursor: pointer;
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 17px;
 }
 /*ul.tabs3 li:first-child{
@@ -2929,7 +2932,7 @@ border-bottom-right-radius:16px;
 ul.tabs3 li.current{
 	background: #8c8c8c;
 	color: #ffffff;
-	font-family: OpenSans-Regular;
+	
 	font-size: 17px;
 	text-decoration:none;
 }
@@ -2958,7 +2961,7 @@ ul.tabs3 li.current{
 }
 .adders_testimonials_smill{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-decoration:none;
 	color: #2f2f2f;
@@ -2967,7 +2970,7 @@ ul.tabs3 li.current{
 }
 .adders_testimonials{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 33px;
 	text-decoration:none;
 	margin: 0% 0 0 0%;
@@ -2981,7 +2984,7 @@ table.foundation_stage_table{
 }
 .adders_foundation{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 27px;
 	text-decoration:none;
 	margin: 0%;
@@ -2991,7 +2994,7 @@ table.foundation_stage_table{
 }
 .foundation_stage{
 	float:left;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-decoration:none;
 	border-bottom: 5px solid #ffffff;
@@ -3005,7 +3008,7 @@ table.foundation_stage_table{
 	float:left;
 	width: 32%;
 	padding: 1% 0;
-	font-family: OpenSans-Regular;
+	
 	font-size: 19px;
 	text-align:center;
 	text-decoration:none;
@@ -3017,7 +3020,7 @@ table.foundation_stage_table{
 	width: 32%;
 	text-align:center;
 	padding: 1% 0;
-	font-family: OpenSans-Regular;
+	
 	font-size: 17px;
 	text-decoration:none;
 	border-bottom: 5px solid #ffffff;
@@ -3030,7 +3033,7 @@ table.foundation_stage_table{
 	width: 32%;
 	text-align:center;
 	padding: 1% 0;
-	font-family: OpenSans-Regular;
+	
 	font-size: 17px;
 	text-decoration:none;
 	text-align:center;
