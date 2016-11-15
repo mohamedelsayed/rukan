@@ -22,11 +22,16 @@ src: url(../font/OpenSans-Bold.ttf);
 }
 body {
     margin: 0px;
+	transition: all 0.5s ease 0s;
 	padding: 0px;
 	font-family: Montserrat-Light;
 }
 li {
     display: table-cell;
+}
+a {
+    transition: all 0.5s ease 0s;
+	transition: scale(2) rotate(30deg) translate(50px);
 }
 p{
 	margin-top: 0px;
@@ -469,7 +474,8 @@ header{
 	text-align: center;
 	font-family:Montserrat-Light;
 	font-size: 45px;
-	margin-top: 15px;
+	margin-bottom: 25px;
+	margin-top: 20px;
 	text-decoration:none;
 	color: #8c8c8c;
 }
@@ -743,6 +749,39 @@ header{
 	padding-top: 10px;
 	float:left;
 	border-bottom: 1px solid #e7e7e7;
+}
+.home_second_widget_word{
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-family: Montserrat-Light;
+	font-size: 40px;
+	color: #252525;
+	text-decoration:none;
+}
+.home_second_widget_image1{	
+	background-image:url(../../img/front/rukan_img_top.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.home_second_widget_image2{	
+	background-image:url(../../img/front/rukan_img.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    float: left;
+    text-align: center;
+    width: 100%;
+}
+.home_second_widget_image3{	
+	background-image:url(../../img/front/rukan_img_right.png);
+    background-position: right;
+    background-repeat: no-repeat;
+    float: left;
+    text-align: center;
+    width: 100%;
 }
 .adder_left{
 	font-family: OpenSans-Regular, sans-serif;
