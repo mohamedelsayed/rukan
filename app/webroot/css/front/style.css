@@ -23,7 +23,7 @@ src: url(../font/OpenSans-Bold.ttf);
 body {
     margin: 0px;
 	padding: 0px;
-	font-family: Montserrat;
+	font-family: Montserrat-Light;
 }
 li {
     display: table-cell;
@@ -315,13 +315,18 @@ header{
 	color:#404041;
 	width: 700px;
 }
+.home_word_widgets{
+	float:left;
+	width:100%;
+	}
 .home_word_widgets2{
 	color: #252525;
-	background-image:url(../../img/front/border-slider.jpg);
+	background-image:url(../../img/front/border-slider.png);
 	background-repeat: repeat-x;
     float: left;
-    font-family: Montserrat-Light;
-    font-size: 38px;
+    font-family: Lato;
+    font-size: 45px;
+	margin-top: -48px;
 	padding-top: 60px;
 	height: 180px;
     text-align: center;
@@ -438,8 +443,36 @@ header{
 	cursor: pointer;
 	background-color: #dfdfdf;
 }
-
-
+.home_widget_fourth_body{
+	width: 100%;
+	float:left;
+	margin-bottom: 30px;
+}
+.home_widget_value{
+	width: 20%;
+	float:left;
+	text-align: center;
+}
+.home_widget_value_title{
+	text-align: center;
+	font-family:Montserrat-Light;
+	font-size: 40px;
+	margin-top: 15px;
+	text-decoration:none;
+	color: #252525;
+}
+.home_widget_fourth{
+	width: 100%;
+	float:left;
+}
+.home_widget_fourth_title{
+	text-align: center;
+	font-family:Montserrat-Light;
+	font-size: 45px;
+	margin-top: 15px;
+	text-decoration:none;
+	color: #8c8c8c;
+}
 .ri_2{
 	float:left;
 	margin-top:-3px;
@@ -1437,8 +1470,7 @@ ul.tabs2 li.current{
 .data_write{
     color: #58595b;
     float: left;
-    
-    font-size:  31px;
+    font-size:  27px;
 	margin-left: 20px;
 	width: 70%;
     text-decoration: none;
@@ -1455,11 +1487,12 @@ ul.tabs2 li.current{
 }
 
 .data{
-	 background-color: #8c8c8c;
+	 background-color: #f07421;
     color: #ffffff;
+	border-radius: 50%;
     float: left;
-    font-family: OpenSans-Light;
-    font-size: 40px;
+    font-family: Montserrat-Light;
+    font-size: 30px;
     height: 115px;
     padding-bottom: 27px;
     padding-left: 4%;
@@ -1481,13 +1514,12 @@ ul.tabs2 li.current{
     width: 335px;
 }
 .img_bottow_write{
-	background-color: #8c8c8c;
+	background-color: #e32d4e;
     color: #ffffff;
     float: left;
-    
     font-size: 30px;
     height: 50px;
-    margin-top: -24%;
+    margin-top: -20%;
     opacity: 0.8;
     padding-left: 9%;
     padding-top: 6%;
@@ -3054,4 +3086,9 @@ table.foundation_stage_table{
     padding: 0;
     position: relative;
     width: 960px;
+}
+.line_border{
+	width: 100%;
+	float:left;
+	border: 3px solid #8c8c8c;
 }
