@@ -31,8 +31,16 @@ li {
 }
 a {
     transition: all 0.5s ease 0s;
-	transition: scale(2) rotate(30deg) translate(50px);
 }
+a:hover{
+	transform: rotate(360deg);
+	transition: all 0.5s ease 0s;
+}
+.men_face img:hover{
+	transform: rotate(360deg);
+	transition: all 0.5s ease 0s;
+}
+
 p{
 	margin-top: 0px;
 	margin-bottom: 0px;
