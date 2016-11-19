@@ -59,10 +59,11 @@ p{
 }
 header{
 	background-color: #FFFFFF;
-    height: 112px;
+    height: 135px;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+	border-bottom: 7px solid #ececec !important;
 }
 .main-header{
 	margin: 0 auto;
@@ -203,9 +204,10 @@ header{
 	background-color: #e32c4d;
 }
 .men_etop, .top_header_logo{
-	background-image: url("../../img/front/background-header.png");
+	/*background-image: url("../../img/front/background-header.png");
     background-repeat: repeat-x;
-    background-size: cover;
+    background-size: cover;*/
+	background-color: #e32c4d;
     float: left;
     height: 60px;
     width: 100%;
@@ -1005,10 +1007,10 @@ ul.tabs li.current{
 }
 .top_con_2{
 	float:left;
-	
 	font-size: 35px;
 	text-decoration:none;
-	color: #8c8c8c;
+	color: #414141;
+	font-weight: bold;
 	width: 100%;
 	padding: 0% 0;
 }
@@ -1185,14 +1187,14 @@ ul.tabs li.current{
 	padding-top: 1%;
 }
 .bottm_img{
-	background-color: #e32c4d;
+	background-color: #f5851f;
     color: #ffffff;
     float: left;
     height: 51px;
     margin: -0.99% 0 0 4%;
     padding-left: 2.5%;
     text-decoration: none;
-    width: 88.8%;
+    width: 528px !important;
 }
 .adders_write{
     color: #868686;
@@ -1213,9 +1215,8 @@ ul.tabs li.current{
     width: 91%;
 }
 .bottm_apply{
-    color: #8c8c8c;
+    color: #e32c4d;
     float: left;
-    
     font-size: 20px;
     margin: 1.6% 0 0 3%;
     text-decoration: none;
@@ -1271,11 +1272,13 @@ ul.tabs li.current{
 }
 .adders_about_s{
 	float:left;
-	
 	font-size: 33px;
 	text-decoration:none;
-	color: #8c8c8c;
+	color: #f07421;
 	width: 65%;
+}
+.bottm_reed a{
+	color: #e32c4d !important;
 }
 .adders_about_smill_w{
 	float:left;
@@ -1371,7 +1374,7 @@ ul.tabs2 li.current{
 	text-decoration:none;
 }
 .vacancies_groub{
-    border-left: 6px solid #8c8c8c;
+    border-left: 6px solid #e32c4d;
     float: left;
     height: 175px;
     margin-top: 3%;
@@ -1379,14 +1382,12 @@ ul.tabs2 li.current{
 }
 .careers_groub{
 	margin-bottom: 3%;
-	/*background-image: url(../../img/front/background_career.jpg);*/
 	background-repeat: no-repeat;
     background-position: top;
     float: left;
     margin-right: 1%;
 	margin-top: 2%;
     width: 49%;
-    border-top: 2px solid #8c8c8c;
 }
 .careers_groub_img{
 	width: 100%;
@@ -1399,17 +1400,22 @@ ul.tabs2 li.current{
 	padding: 1% 0%;
 	float:left;
 }
+.img_about img{
+	border: none !important;
+}
 .com_small{
 	height: 500px;
-	margin-bottom: 1%;
 	float:left;
-	background-color: #f4f4f4;
-	width: 32.3%;
-	margin-right: 1%;
+	width: 20%;
 	text-align: center;
+}
+.logo_small img{
+	max-height: none !important;
+	max-width: 100% !important;
 }
 .logo_small{
 	width: 100%;
+	height: auto !important;
 	padding: 8% 0 0;
 }
 
@@ -1701,7 +1707,6 @@ ul.tabs2 li.current{
     font-family: Lato;
     font-size: 16px;
     margin-bottom: 3%;
-    margin-top: 1%;
     text-align: center;
     text-decoration: none;
     width: 100%;
@@ -2001,6 +2006,13 @@ ul.tabs2 li.current{
 	border-radius: 5px;
 	border: none;
 	padding-bottom: 4px;
+}
+ul.tabs3 li.current a{
+	background-color: #f07421 !important;
+	border-radius: 10px 10px 0 0;
+}
+ul.tabs3 li{
+	border-bottom: 2px solid #f07421!important;
 }
 .Suche_a_2{
 	font-family: Arial;
@@ -2707,10 +2719,9 @@ input.file{
     width: 100%;
 }
 .img_gallery_write{
-	background-color: #8c8c8c;
+	background-color: #e32c4d;
     color: #ffffff;
     float: left;
-    
     font-size: 30px;
     height: 50px;
     margin-top: -26%;
@@ -2721,11 +2732,10 @@ input.file{
     width: 91.5%;
 }
 .Send{
-	border: 1.9px solid #8c8c8c;
+	border: 2px solid #e32c4d;
     border-radius: 10px;
     float: left;
-	color: #8c8c8c;
-    
+	color: #e32c4d;
     font-size: 22px;
     margin-top: 4%;
     padding: 1.5% 1%;
@@ -2809,8 +2819,15 @@ input.file{
 	width: 92%;
 	height: 32px;
 	background-color: #ffffff;
-    border: 1px solid #bcbcbc;
+    border: 2px solid #bcbcbc;
 	border-radius: 10px;
+}
+.left_addret a{
+	color: #e32c4d !important;
+}
+.home img{
+	margin-top: 0px !important;
+	margin-left: 0 !important;
 }
 .input_2_new{
 	width: 85%;
