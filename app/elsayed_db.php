@@ -49,3 +49,4 @@ define('STMP_SERVER', 'mail.lifecoachingegypt.com');
 define('STMP_PORT', 26);
 define('SMTPSECURE', FALSE);
 define('SEND_STMP', FALSE);
+define('AUTH_CONTROLLER_PATH', ROOT.DS.'app'.DS.'auth_controller.php');
