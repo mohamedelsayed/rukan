@@ -4,7 +4,7 @@
  * @link http://www.mohamedelsayed.net
  * @copyright Copyright (c) 2015 Programming by "mohamedelsayed.net"
  */
-require_once '../auth_controller.php';
+require_once AUTH_CONTROLLER_PATH;
 class WidgetsController extends AuthController {
 	var $name = 'Widgets';
 	var $uses = array('Widget');

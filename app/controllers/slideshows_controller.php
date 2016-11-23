@@ -4,7 +4,7 @@
  * @author Author Email "me@mohamedelsayed.net"
  * @copyright Copyright (c) 2014 Programming by "mohamedelsayed.net"
  */
-require_once '../auth_controller.php';
+require_once AUTH_CONTROLLER_PATH;
 class SlideshowsController extends AuthController {
 
 	var $name = 'Slideshows';

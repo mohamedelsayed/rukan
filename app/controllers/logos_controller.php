@@ -1,5 +1,5 @@
 <?php
-require_once '../auth_controller.php';
+require_once AUTH_CONTROLLER_PATH;
 class LogosController extends AuthController {
 	var $name = 'Logos';
 	var $components = array('Upload');

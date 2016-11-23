@@ -4,7 +4,7 @@
  * @author Author Email "me@mohamedelsayed.net"
  * @copyright Copyright (c) 2013 Programming by "mohamedelsayed.net"
  */
-require_once '../auth_controller.php';
+require_once AUTH_CONTROLLER_PATH;
 class NodesController extends AuthController {
 	var $name = 'Nodes';
 	//use upload component.

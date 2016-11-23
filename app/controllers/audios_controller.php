@@ -1,5 +1,5 @@
 <?php
-require_once '../auth_controller.php';
+require_once AUTH_CONTROLLER_PATH;
 class AudiosController extends AuthController {
 
 	var $name = 'Audios';
