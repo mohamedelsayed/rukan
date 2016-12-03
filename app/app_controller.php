@@ -385,9 +385,11 @@ class AppController extends Controller {
     public function mainSmartResizeImage($image = ''){
         $imagePath = $this->Upload->imageUploadDir.$image;
         $maxImageWidth = 960;
-        list($width, $height, $type, $attr) = getimagesize($imagePath);                
-        if($width > $maxImageWidth){
-            $this->Upload->smartResizeImage($imagePath, $maxImageWidth,0,true);
-        }        
+		if(file_exists($imagePath)){
+	        list($width, $height, $type, $attr) = getimagesize($imagePath);                
+	        if($width > $maxImageWidth){
+	            $this->Upload->smartResizeImage($imagePath, $maxImageWidth,0,true);
+	        }        
+		}
     }
 }
