@@ -14,6 +14,7 @@ class CatsController extends AuthController {
 	    $conditions = array();
 		$this->Cat->recursive = 0;   
         $title = '';     
+		$order = array('Cat.approved'=>  'DESC', 'Cat.weight'=> 'asc', 'Cat.id' => 'DESC');		
         if(isset($_REQUEST['title']) && trim($_REQUEST['title']) != ''){
             $title = $_REQUEST['title'];
 		    $conditions['Cat.title LIKE'] = "%".$title."%";
@@ -24,7 +25,9 @@ class CatsController extends AuthController {
             $conditions['Cat.parent_id'] = $parent_id_get;            
         }
         if(!empty($conditions)){
-            $this->paginate = array('conditions' => $conditions);
+            $this->paginate = array('conditions' => $conditions, 'order' => $order,);
+        }else{
+        	$this->paginate = array('order' => $order,);
         }
 		$this->set('cats', $this->paginate());
         $parents_data = $this->Cat->find('all', array('conditions' => array('Cat.parent_id != ' => 0)));
