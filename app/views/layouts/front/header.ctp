@@ -31,11 +31,11 @@
             </div>
         </div>
         <div class="menu_big">
-            <div class="logo">
-                <a href="<?php echo $base_url;?>">
-                    <img src="<?php echo $base_url.'/img/front/logo.png';?>" />
-                </a>
-            </div>
+        	<a href="<?php echo $base_url;?>">
+	            <div class="logo">                
+                    <img src="<?php echo $base_url.'/img/front/logo.png';?>" />                
+    	        </div>
+	        </a>
             <div class="menu_">
                 <ul id="jMenu" class="menu">
                     <li>
