@@ -1,31 +1,33 @@
 <?php if(isset($cats)){?>
-    <?php if(!empty($cats)){?>
-        <div class="student_life_tabs">
-            <ul class="tabs3">
-                <?php foreach ($cats as $key => $value) {
-                    $class = '';
-                    $href = 'href="'.$base_url.'/page/show/'.$value['Cat']['parent_id'].'/'.$value['Cat']['id'].'"';
-                    $additional_code = '';
-                    if($value['Cat']['has_url'] == 1){
-                        if (strpos($value['Cat']['url'], 'http') !== FALSE) {
-                            $href = 'href="'.$value['Cat']['url'].'"';
-                            $additional_code = ' target="_blank" ';
-                        }else{
-                            $href = 'href="'.$base_url.$value['Cat']['url'].'"';
-                        }
-                    }
-                    if($childid == $value['Cat']['id']){
-                        $class = ' current';
-                        $href = '';
-                    }?>
-                    <li class="tab3-link <?php echo $class;?>">
-                        <a <?php echo $href;?> <?php echo $additional_code;?>>
-                            <?php echo $value['Cat']['title'];?>
-                        </a>
-                    </li>
-                <?php }?>
-            </ul>
-        </div>
+    <?php if(!empty($cats)){
+    	if(count($cats) > 1){?>
+	        <div class="student_life_tabs">
+	            <ul class="tabs3">
+	                <?php foreach ($cats as $key => $value) {
+	                    $class = '';
+	                    $href = 'href="'.$base_url.'/page/show/'.$value['Cat']['parent_id'].'/'.$value['Cat']['id'].'"';
+	                    $additional_code = '';
+	                    if($value['Cat']['has_url'] == 1){
+	                        if (strpos($value['Cat']['url'], 'http') !== FALSE) {
+	                            $href = 'href="'.$value['Cat']['url'].'"';
+	                            $additional_code = ' target="_blank" ';
+	                        }else{
+	                            $href = 'href="'.$base_url.$value['Cat']['url'].'"';
+	                        }
+	                    }
+	                    if($childid == $value['Cat']['id']){
+	                        $class = ' current';
+	                        $href = '';
+	                    }?>
+	                    <li class="tab3-link <?php echo $class;?>">
+	                        <a <?php echo $href;?> <?php echo $additional_code;?>>
+	                            <?php echo $value['Cat']['title'];?>
+	                        </a>
+	                    </li>
+	                <?php }?>
+	            </ul>
+	        </div>
+        <?php }?>
     <?php }?>
 <?php }?>
 <style type="text/css">

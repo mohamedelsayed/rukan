@@ -28,8 +28,11 @@ $month_letter = date("F", mktime(0, 0, 0, $month));?>
                 <?php echo $this->Form->input('month', array('type' => 'select', 'options' => $months_options, 'div' => array('class' => 'months_select calendar_select'), 'label' => false, 'id' => 'month_select_id', 'default' => $month));
                 echo $this->Form->input('year', array('type' => 'select', 'options' => $years_options, 'div' => array('class' => 'years_select calendar_select'), 'label' => false, 'id' => 'year_select_id', 'default' => $year));
                 echo $this->Form->input('category', array('type' => 'select', 'options' => $categories_options, 'div' => array('class' => 'categories_select calendar_select'), 'label' => false, 'id' => 'category_select_id', 'default' => $category));?>
-                </div>
-            <?php if(isset($categories) && !empty($categories)){?>                
+            </div>           
+            <div class="calendar_div">
+                <?php echo draw_calendar($month, $year, $events_by_days);?>
+            </div>   
+             <?php if(isset($categories) && !empty($categories)){?>                
                 <div class="calendar_list_categories">
                     <?php foreach ($categories as $key => $category) {?>
                         <div class="category_div">
@@ -38,10 +41,7 @@ $month_letter = date("F", mktime(0, 0, 0, $month));?>
                         </div>                        
                     <?php }?>
                 </div>
-            <?php }?>
-            <div class="calendar_div">
-                <?php echo draw_calendar($month, $year, $events_by_days);?>
-            </div>            
+            <?php }?>         
         </div>
     </div>
 </div>

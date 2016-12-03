@@ -2,7 +2,13 @@
 <div id="tab-2" class="tab-content current" style="width: 100%;">
     <div class="tab-content_top" style="width: 100%;min-height: 250px;">
         <div class="top_con">
-            <div style="" class="top_con_2"><?php echo $title;?></div>
+        	<?php if(isset($cats)){?>
+			    <?php if(!empty($cats)){
+			    	//if(count($cats) > 1){?>
+			            <div style="" class="top_con_2"><?php echo $title;?></div>
+		            <?php //}?>
+	            <?php }?>
+            <?php }?>
             <?php include_once 'tabs.php';?>
             <?php if(isset($testimonials) && $testimonials == 1){
                 include_once 'testimonials.php';

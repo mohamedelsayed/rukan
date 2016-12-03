@@ -38,7 +38,7 @@ echo $this->element('front'.DS.'breadcrumb', array('tree' => $tree));?>
             <div class="top_con_2"><?php echo $content['Content']['title'];?></div>
             <div class="img_about" id="map_canvas">
                 <?php //echo $content['Content']['map_iframe'];?>
-                <?php /*<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d27513.56686643945!2d31.1884216!3d30.4588901!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1397339395281" width="960" height="345" frameborder="0" style="border:0; margin-top:2.5%;"></iframe>*/?>
+                <?php /*<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d27513.56686643945!2d31.1884216!3d30.4588901!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sar!2seg!4v1397339395281" width="1200" height="345" frameborder="0" style="border:0; margin-top:2.5%;"></iframe>*/?>
             </div>
         </div>
     </div>
@@ -187,7 +187,7 @@ echo $this->element('front'.DS.'breadcrumb', array('tree' => $tree));?>
 </div>      
 <script type="text/javascript">
 $(document).ready(function(){
-    $(".img_about").css('width','960');
+    $(".img_about").css('width','1200');
     $(".img_about").css('height','345');
     //$(".img_about iframe").css('border','2px solid #adadad');
 });

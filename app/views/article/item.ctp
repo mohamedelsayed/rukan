@@ -3,10 +3,16 @@
     $article_link = $base_url.'/article/item/'.$article_id;
     $article_date = date('F d, Y', strtotime($article['Article']['date'])); 
     $image = '';
+	$image_path = '';
     if(isset($article['Gal'])){
     	$image = $base_url.'/img/upload/'.$article['Gal'][0]['image'];
+		$image_path = WWW_ROOT.'img'.DS.'upload'.DS.$article['Gal'][0]['image'];
     }
     $resize->smartResizeImage($article['Gal'][0]['image']);
+	if(file_exists($image_path)){   
+	}else{
+		$image = DEFAULT_IMAGE;
+	}
     $title = '';
     if($article['Article']['title'] != ''){
     	$title = $article['Article']['title'];
