@@ -88,7 +88,7 @@ class ArticleController  extends AppController {
             }
         }
         $data .= '<script type="text/javascript">
-                    $(document).ready(function() {
+                    jQuery(document).ready(function() {
                         jQuery(\'#loadmorearticles\').attr("pagecount", "'.$page_count.'");
                     });
                 </script>'; 

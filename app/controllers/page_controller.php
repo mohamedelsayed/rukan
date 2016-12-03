@@ -149,16 +149,17 @@ class PageController  extends AppController {
         $this->set('image' , $image);
         $this->set('pdf_file' , $pdf_file);
         $this->set('pdf_name' , $pdf_name);                
-        //if($cat_id == 4){
-            $cats = $this->Cat->find(
-                'all', array(
-                    'conditions' => array('Cat.approved' => 1, 'Cat.parent_id' => $cat_id),
-                    'order' => array('Cat.weight' => 'ASC','Cat.id'=>'DESC')
-                )           
-            );   
-            $this->set('cats' , $cats);    
-            $this->set('childid' , $childid);                 
-        //}
+        $cats = $this->Cat->find(
+            'all', array(
+                'conditions' => array('Cat.approved' => 1, 'Cat.parent_id' => $cat_id),
+                'order' => array('Cat.weight' => 'ASC','Cat.id'=>'DESC')
+            )           
+        );   
+        $this->set('cats' , $cats);    
+        $this->set('childid' , $childid);                 
+    	if(count($cats) == 1){
+    		$this->set('title' , $title);
+		}
 	}	
     function academic($id = 0){
         $tree = array();

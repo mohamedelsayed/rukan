@@ -154,4 +154,21 @@ class CatsController extends AuthController {
         }
         $this->redirect($this->referer(array('action' => 'index')));
     }
+	function publish($id, $approved){
+		if (!$id) {
+            $this->Session->setFlash(__('Invalid Category', true));
+            $this->redirect($this->referer(array('action' => 'index')));
+        }
+		$this->Cat->id = $id;
+		if ($this->Cat->saveField('approved', $approved)) {
+			if($approved == 1){
+				$this->Session->setFlash(__('The Category has been published', true));
+			}else{
+				$this->Session->setFlash(__('The Category has been unpublished', true));
+			}
+		} else {
+			$this->Session->setFlash(__('The Category could not be saved. Please, try again.', true));
+		}
+		$this->redirect($this->referer(array('action' => 'index')));					
+	}
 }
