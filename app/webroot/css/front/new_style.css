@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 .no_data_found, .no-data-found {
 	text-align: center;
 	margin: 20px 0px;
 	width: 100%;
-	font-family: OpenSans-Regular;
 	font-size: 16px;
 	line-height: 25px;
 	color: #f07421;
@@ -30,7 +31,6 @@
 	text-align: center;
 }
 .maintenancetext {
-	font-family: OpenSans-Regular;
 	font-size: 18px;
 	text-decoration: none;
 	color: #404041;
@@ -307,7 +307,6 @@ html, body {
 	width: 100%;
 	margin-top: 100px;
 	margin-bottom: 100px;
-	font-family: OpenSans-Regular, sans-serif;
 }
 .grob_contacts a {
 	text-decoration: none;
@@ -565,7 +564,6 @@ td.calendar-day-head {
 	font-size: 20px;
 }
 body {
-	font-family: OpenSans-Regular;
 }
 .eventpopoupcontent {
 	font-family: OpenSans-Light;
@@ -603,7 +601,6 @@ td.calendar-day {
 	border-bottom: 5px solid #ffffff;
 	border-right: 5px solid #ffffff;
 	color: #414141;
-	font-family: OpenSans-Regular;
 	font-size: 17px;
 	padding: 1% 0;
 	text-align: center;
@@ -620,7 +617,6 @@ td.calendar-day {
 	border-bottom: 5px solid #ffffff;
 	border-right: 5px solid #ffffff;
 	color: #ffffff;
-	font-family: OpenSans-Regular;
 	font-size: 23px;
 	padding: 1% 0;
 	text-decoration: none;
@@ -659,15 +655,15 @@ input:focus {
 }
 .event_home_category {
 	color: #58595b;
-	font-family: Lato;
-	font-size: 18px;
+	font-family: 'Lato', sans-serif;
+	font-size: 20px;
 	float: left;
 	margin-left: 20px;
 }
 .white_green_button:hover {
 	background: #f07421;
-	color: #e32c4d;
-	border: 2px solid #f07421;
+	color: #ffffff;
+	border: 3px solid #f07421;
 }
 .white_green_button a:hover {
 	color: #FFFFFF;

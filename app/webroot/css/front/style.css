@@ -1,40 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@font-face{
-font-family: Helvetica Neue LT Std;
-src: url(../font/HelveticaNeueLTStd-Cn.otf);
-}
-@font-face{
-font-family: HelveticaLTStd-Light;
-src: url(../font/HelveticaLTStd-Light.otf);
-}
-@font-face{
-
-src: url(../font/OpenSans-Regular.ttf);
-}
-@font-face{
-font-family: OpenSans-Light;
-src: url(../font/OpenSans-Light.ttf);
-}
-@font-face{
-font-family: OpenSans-Bold;
-src: url(../font/OpenSans-Bold.ttf);
-}
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 body {
     margin: 0px;
 	transition: all 0.5s ease 0s;
 	padding: 0px;
-	font-family: Montserrat-Light;
+	font-family: 'Montserrat', sans-serif;
 }
 li {
     display: table-cell;
 }
 a {
     transition: all 0.5s ease 0s;
-}
-a:hover{
-	transform: rotate(360deg);
-	transition: all 0.5s ease 0s;
 }
 .men_face img:hover{
 	transform: rotate(360deg);
@@ -194,7 +170,8 @@ header{
 	color: #414141;
     float: left;
     font-family: Lato;
-    font-size: 21px;
+	font-weight:400;
+    font-size: 24px;
     padding: 0 6px 0 5px;
     line-height: 75px;
     text-align: center;
@@ -339,7 +316,7 @@ header{
 	background-image:url(../../img/front/border-slider.png);
 	background-repeat: repeat-x;
     float: left;
-    font-family: Lato;
+    font-family: 'Montserrat', sans-serif;
     font-size: 45px;
 	margin-top: -48px;
 	padding-top: 60px;
@@ -470,7 +447,7 @@ header{
 }
 .home_widget_value_title{
 	text-align: center;
-	font-family:Montserrat-Light;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 40px;
 	margin-top: 15px;
 	text-decoration:none;
@@ -482,7 +459,7 @@ header{
 }
 .home_widget_fourth_title{
 	text-align: center;
-	font-family:Montserrat-Light;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 45px;
 	margin-bottom: 25px;
 	margin-top: 20px;
@@ -534,8 +511,8 @@ header{
 	margin-top: 20px;
 	width: 100%;
 	text-align: center;
-	
-	font-size: 40px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 45px;
 	text-decoration:none;
 	color: #8c8c8c;
 }
@@ -764,7 +741,7 @@ header{
 	float: left;
 	width: 100%;
 	text-align: center;
-	font-family: Montserrat-Light;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 40px;
 	color: #252525;
 	text-decoration:none;
@@ -1007,7 +984,8 @@ ul.tabs li.current{
 }
 .top_con_2{
 	float:left;
-	font-size: 35px;
+	font-size: 48px;
+	font-family: 'Montserrat', sans-serif;
 	text-decoration:none;
 	color: #414141;
 	font-weight: bold;
@@ -1016,7 +994,7 @@ ul.tabs li.current{
 }
 .top_a_con{
 	float:left;
-	font-family: OpenSans-Semibold;
+	font-family: 'Montserrat', sans-serif;
 	font-size: 18.46px;
 	text-decoration:none;
 	color: #000000;
@@ -1170,8 +1148,8 @@ ul.tabs li.current{
 }
 .bott_more{
 	float:left;
-	
-	font-size: 25px;
+	font-family: 'Lato', sans-serif;
+	font-size: 26px;
 	text-decoration:none;
 	color: #e32d4e;
 	width: 60%;
@@ -1179,7 +1157,7 @@ ul.tabs li.current{
 }
 .top_con_3{
 	float:left;
-	
+	font-family: 'Lato', sans-serif;
 	font-size: 25px;
 	text-decoration:none;
 	color: #9b9b9b;
@@ -1353,6 +1331,8 @@ ul.tabs2{
 ul.tabs2 li{
 	background: none;
 	color: #8b8b8b;
+	font-size: 25px;
+	font-family: 'Lato', sans-serif;
 	height: 37px;
 	display: inline-block;
 	padding: 0 0 0 1%;
@@ -1435,8 +1415,8 @@ ul.tabs2 li.current{
 
 .bot_school{
 	float:left;
-	
-	font-size: 19px;
+	font-family: 'Lato', sans-serif;
+	font-size: 26px;
 	text-decoration:none;
 	color: #58595b;
 	text-align:justify;
@@ -1446,8 +1426,8 @@ ul.tabs2 li.current{
 
 .top_con_iddle{
 	float:left;
-	
-	font-size: 31px;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 35px;
 	text-decoration:none;
 	color: #58595b;
 	text-align:justify;
@@ -1493,6 +1473,7 @@ ul.tabs2 li.current{
 .img_big_bottow{
     float: left;
 	margin-top: 3%;
+	margin-bottom: 5px;
 }
 .img_bottow{
 	/*border: 3px solid #adadad;*/
@@ -1523,7 +1504,9 @@ ul.tabs2 li.current{
 .data_write{
     color: #58595b;
     float: left;
-    font-size:  27px;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: bold;
+    font-size:  24px;
 	margin-left: 20px;
 	width: 70%;
     text-decoration: none;
@@ -1544,7 +1527,7 @@ ul.tabs2 li.current{
     color: #ffffff;
 	border-radius: 50%;
     float: left;
-    font-family: Montserrat-Light;
+    font-family: 'Montserrat', sans-serif;
     font-size: 30px;
     height: 115px;
     padding-bottom: 27px;
@@ -1570,12 +1553,13 @@ ul.tabs2 li.current{
 	background-color: #e32d4e;
     color: #ffffff;
     float: left;
-    font-size: 30px;
+	font-family: 'Lato', sans-serif;
+    font-size: 31.98px;
     height: 50px;
-    margin-top: -20%;
+    margin-top: -18%;
     opacity: 0.8;
     padding-left: 9%;
-    padding-top: 6%;
+    padding-top: 4%;
     text-decoration: none;
     width: 91.5%;
 }
@@ -2010,7 +1994,14 @@ ul.tabs2 li.current{
 ul.tabs3 li.current a{
 	background-color: #f07421 !important;
 	border-radius: 10px 10px 0 0;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 26px;
 }
+.tab3-link a{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 26px;
+}
+
 ul.tabs3 li{
 	border-bottom: 2px solid #f07421!important;
 }
