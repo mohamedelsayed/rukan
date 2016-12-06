@@ -1229,11 +1229,11 @@ ul.tabs li.current{
 }
 .adders_careers{
 	float:left;
-	
+	font-family: 'Montserrat', sans-serif;
 	font-size: 27px;
 	text-decoration:none;
 	margin: 0% 0 0 3%;
-	padding: 5.5% 0 6.5%;
+	padding: 5.5% 0 4%;
 	color: #414141;
 	width: 100%;
 }
@@ -1362,12 +1362,10 @@ ul.tabs2 li.current{
     width: 100%;
 }
 .careers_groub{
-	margin-bottom: 3%;
 	background-repeat: no-repeat;
     background-position: top;
     float: left;
     margin-right: 1%;
-	margin-top: 2%;
     width: 49%;
 }
 .careers_groub_img{
