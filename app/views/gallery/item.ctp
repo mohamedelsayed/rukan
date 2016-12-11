@@ -15,14 +15,14 @@
     <?php $tree = array(array('url' => '/page/show/6', 'str' => 'Media'),
     array('url' => '/gallery/all', 'str' => 'Gallery'));
     echo $this->element('front'.DS.'breadcrumb', array('tree' => $tree));?>
-    <div id="tab-2" class="tab-content current">
+    <div id="tab-2" class="tab-content current" style="width: 100%;">
         <div class="tab-content_top">
             <div class="top_con">
                 <?php echo $this->element('front'.DS.'media_tabs', array('type' => 'gallery'));?>
                 <div style="width: 100%; margin-bottom: 30px;" class="adders_news"><?php echo $title;?></div>                
                 <?php if(!empty($album['Gal'])){?>
                     <div class="slide_galary">
-                        <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:960px;margin:0px auto 88px;">
+                        <div id="amazingslider-wrapper-1" style="display:block;position:relative;max-width:1200px;margin:0px auto 88px;">
                             <div id="amazingslider-1" style="display:block;position:relative;margin:0 auto;">
                                 <ul class="amazingslider-slides" style="display:none;">
                                     <?php foreach ($album['Gal'] as $key => $value) {

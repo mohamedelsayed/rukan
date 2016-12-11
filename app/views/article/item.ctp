@@ -28,8 +28,8 @@
     <?php $tree = array(array('url' => '/page/show/6', 'str' => 'Media'),
     array('url' => '/article/all', 'str' => 'News'));
     echo $this->element('front'.DS.'breadcrumb', array('tree' => $tree));?>
-    <div id="tab-2" class="tab-content current">
-        <div class="tab-content_top">
+    <div id="tab-2" class="tab-content current" style="width: 100%;">
+        <div class="tab-content_top" style="width: 100%;">
             <div class="top_con">
                 <?php echo $this->element('front'.DS.'media_tabs', array('type' => 'article'));?> 
                 <div class="news2_groub" style="width: 100%;margin-right: 0px;margin-bottom: 56px;">
