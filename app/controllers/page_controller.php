@@ -255,7 +255,9 @@ class PageController  extends AppController {
                         if($type==$typeOfKeyword){
                             if($type != 'int'){
                                 $keyword=strtolower($keyword);
-                                $sql="SELECT * FROM `$tableName` WHERE lower(`$field`) like '%$keyword%' OR lower(`$field`) like '$keyword%' OR lower(`$field`) like '%$keyword'";                          
+                                $sql="SELECT * FROM `$tableName` 
+                                			   WHERE (lower(`$field`) like '%$keyword%' OR lower(`$field`) like '$keyword%' OR lower(`$field`) like '%$keyword')
+                                			   AND(approved = 1)";                          
                                 $temp = $this->Cat->query($sql);
                                 if(!empty($temp)){
                                     if(count($temp) > 0){
