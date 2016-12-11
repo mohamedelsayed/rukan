@@ -217,7 +217,7 @@ class PageController  extends AppController {
                 }
             }
             $data = array();            
-            $excepted_fields = array('to_email', 'tab_title', 'position');
+            $excepted_fields = array('to_email', 'tab_title', 'position', 'image');
             foreach($allTablesFields as $tableName=>$fieldArray){                
                 $tmp=array();
                 foreach($fieldArray as $fields){
@@ -227,17 +227,13 @@ class PageController  extends AppController {
                         $typeO=$type;
                         if(is_int($keyword)){
                             $typeOfKeyword="int";                       
-                        }
-                        elseif(is_array($keyword)){
+                        }elseif(is_array($keyword)){
                             $typeOfKeyword="array";                     
-                        }
-                        elseif(is_bool($keyword)){
+                        }elseif(is_bool($keyword)){
                             $typeOfKeyword="boolean";                       
-                        }
-                        elseif(is_string($keyword)){
+                        }elseif(is_string($keyword)){
                             $typeOfKeyword="string";                        
-                        }
-                        elseif(is_float($keyword)){
+                        }elseif(is_float($keyword)){
                             $typeOfKeyword="float";                     
                         }
                         if($type=="int" || $type=="smallint" || $type=="largeint" || $type=="tinyint" || $type=="mediumint"|| $type=="boolean"){
@@ -261,7 +257,8 @@ class PageController  extends AppController {
                                 $temp = $this->Cat->query($sql);
                                 if(!empty($temp)){
                                     if(count($temp) > 0){
-                                        $all_data = array_merge($temp, $all_data);                                
+                                    	$tmp = array_merge($temp, $tmp);
+                                        //$all_data = array_merge($temp, $all_data);                                
                                         //$tmp[]=array('FieldName'=>$field,"Query"=>$sql);                                
                                     }
                                 }
@@ -269,9 +266,10 @@ class PageController  extends AppController {
                         }
                     }                   
                 }
-                /*if(count($tmp)>0){
-                    $data[$tableName]=$tmp;
-                }*/
+                if(count($tmp)>0){
+                	$all_data = array_merge($tmp, $all_data); 
+                    //$data[$tableName]=$tmp;
+                }
             }
         }
         $title = 'Search';
