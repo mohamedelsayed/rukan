@@ -89,7 +89,7 @@ class GalleryController  extends AppController {
             $album_id = $album['Album']['id']; 
             $album_link = $base_url.'/gallery/item/'.$album_id;            
             $image = '';
-            $div_ratio = 264/177;
+            $div_ratio = 350/220;
             if(isset($album['Gal'][0]['image'])){
                 $this->mainSmartResizeImage($album['Gal'][0]['image']);
                 $image = $base_url.'/img/upload/'.$album['Gal'][0]['image'];
