@@ -8,7 +8,7 @@
                     <?php foreach ($articles as $key => $article) {
                         $image = '';
                         $div_ratio = 251/175;
-                        if(isset($article['Gal'])){
+                        if(isset($article['Gal'][0]['image'])){
                             $resize->smartResizeImage($article['Gal'][0]['image']);
                             $image = $base_url.'/img/upload/'.$article['Gal'][0]['image'];
                             $image_path = WWW_ROOT.'img'.DS.'upload'.DS.$article['Gal'][0]['image'];                                 
