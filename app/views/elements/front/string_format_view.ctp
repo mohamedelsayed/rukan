@@ -7,9 +7,10 @@
 				echo $strArr[$index].' ';
 			}
 			echo '...';
+		}else {
+			echo $str_without_tags;
 		}
-		else echo $str;
-	}
-	else 
+	}else{
 		echo $str;
+	}
 }?>

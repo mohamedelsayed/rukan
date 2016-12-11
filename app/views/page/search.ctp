@@ -56,8 +56,8 @@
                                     <a style="cursor: pointer;" <?php echo $href;?>><?php echo strip_tags($title);?></a>
                                     </div>
                                 <div class="data_smill">
-                                    <?php $body = $this->element('front'.DS.'remove_unneeded_tags_from_string', array('string' => $body));
-                                    $body = $this->element('front'.DS.'string_format_view', array('str' => $body, 'val' => 100, 'type' => 'wordsCut'));?>
+                                    <?php //$body = $this->element('front'.DS.'remove_unneeded_tags_from_string', array('string' => $body));
+                                    $body = $this->element('front'.DS.'string_format_view', array('str' => $body, 'val' => 30, 'type' => 'wordsCut'));?>
                                     <?php echo $body;?>
                                 </div>
                             </div>                        
