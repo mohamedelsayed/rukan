@@ -87,7 +87,7 @@ a.jcarousel-prev {
 	width: 27px;
 	z-index: 60;
 	margin-top: 100px;
-	margin-left: 0px;
+	margin-left: 20px;
 	cursor: pointer;
 }
 .jcarousel-wrapper {
@@ -229,6 +229,9 @@ html, body {
 }
 .input3new {
 	padding: 8px 10px;
+}
+..siblings{
+	width: 300px !important;
 }
 .grop_contact_left {
 	width: 605px;
@@ -581,7 +584,7 @@ div.day-number {
 }
 td.calendar-day-head {
 	color: #ffffff;
-	font-family: OpenSans-Light;
+	font-family: Helvetical  Neue lt std;
 	font-size: 20px;
 }
 body {
