@@ -22,8 +22,9 @@
                 <?php }?>
                 <?php if(trim(strip_tags($body)) != ''){?>
                     <div class="page_body_div">
-                        <?php $resize->check_string_images($body);?>
-                        <?php echo $body;?>
+                        <?php $resize->check_string_images($body);
+						echo $this->element('front'.DS.'string_format_images', array('body' => $body));?>
+                        <?php //echo $body;?>
                         <?php if(isset($pdf_file)){
                             if(trim($pdf_file) != ''){?>
                                 <div class="page_pdf_file">
