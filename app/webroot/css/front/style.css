@@ -13,7 +13,11 @@ li {
 a {
     transition: all 0.5s ease 0s;
 }
-.men_face img:hover{
+.men_face a:hover{
+	transform: rotate(360deg);
+	transition: all 0.5s ease 0s;
+}
+.men_face a img:hover{
 	transform: rotate(360deg);
 	transition: all 0.5s ease 0s;
 }
@@ -443,7 +447,7 @@ header{
 .home_widget_fourth_body{
 	width: 100%;
 	float:left;
-	margin-bottom: 30px;
+	margin-bottom: 10px;
 }
 .home_widget_value{
 	width: 20%;
@@ -466,7 +470,7 @@ header{
 	text-align: center;
 	font-family: 'Montserrat Light', arial;
 	font-size: 45px;
-	margin-bottom: 25px;
+	margin-bottom: 35px;
 	margin-top: 20px;
 	text-decoration:none;
 	color: #8c8c8c;
@@ -515,6 +519,7 @@ header{
 	float:left;
 	margin-top: 20px;
 	width: 100%;
+	margin-bottom: 20px;
 	text-align: center;
 	font-family: 'Montserrat Light', arial;
 	font-size: 45px;
@@ -744,7 +749,7 @@ header{
 }
 .home_second_widget_word{
 	float: left;
-	width: 56%;
+	width: 60%;
 	text-align: center;
 	font-family: 'Montserrat Light', arial;
 	font-size: 40px;
@@ -757,6 +762,7 @@ header{
     background-repeat: no-repeat;
     float: left;
 	height: 180px;
+	margin-top: 20px;
     text-align: center;
     width: 100%;
 }
@@ -767,7 +773,7 @@ header{
     float: left;
     height: 130px;
     text-align: center;
-    width: 22%;
+    width: 20%;
 }
 .home_second_widget_image3{	
 	background-image: url("../../img/front/rukan_img_right.png");
@@ -776,7 +782,7 @@ header{
     float: left;
     height: 130px;
     text-align: center;
-    width: 22%;
+    width: 20%;
 }
 .adder_left{
 	font-family: OpenSans-Regular, sans-serif;

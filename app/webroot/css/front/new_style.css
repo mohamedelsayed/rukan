@@ -101,7 +101,7 @@ a.jcarousel-prev {
 	float: left;
 }
 .home_latest_news, .jcarousel {
-	height: 325px;
+	height: 300px;
 }
 a.jcarousel-next:hover {
 	background-image: url(../../img/front/arrow_hover.png);
@@ -756,7 +756,7 @@ ul.tabs3 li a:hover {
 .line_border {
 	border: 1px solid #8c8c8c;
 	float: left;
-	margin: 20px 25%;
+	margin: 40px 25% 10px;
 	width: 50%;
 }
 @media screen and (max-width: 1030px) {
