@@ -217,8 +217,8 @@ header{
     width: 16%;
 }
 .Twitter{
-	 float: right;
-    padding-left: 6%;
+	float: right;
+    margin-left: 6%;
     width: 22%;
 }
 .menu_smill{
@@ -895,7 +895,7 @@ header{
 	text-align:center;
 }
 .adders_face_s a{
-	padding-left: 15px;
+	margin-left: 15px;
 }
 .adders_grop_2{
 	font-family: Arial;
@@ -1363,8 +1363,6 @@ ul.tabs2 li{
 	padding: 0 0 0 1%;
 	cursor: pointer;
 	float:left;
-	
-	font-size: 16px;
 }
 ul.tabs2 li img{
 	width:20px;

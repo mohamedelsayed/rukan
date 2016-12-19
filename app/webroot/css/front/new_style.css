@@ -192,8 +192,9 @@ footer {
 	border: 3px solid #f07421;
 	border-radius: 10px;
 	color: #f07421;
-	font-family: 'Montserrat Light', arial;
+	font-family: 'Montserrat', arial;
 	font-size: 35px;
+	padding: 4px;
 	text-align: center;
 	text-decoration: none;
 	width: 25%;
@@ -289,7 +290,7 @@ html, body {
 	margin: 10px;
 	border-top: 1px solid #ecf0f1;
 	border-bottom: 1px solid #ecf0f1;
-	font-size: 17px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 24px;
 	margin-bottom: 5px;
@@ -543,7 +544,7 @@ div.day-number {
 	float: left;
 	width: 14px;
 	height: 14px;
-	margin-top: 7px;
+	margin-top: 3px;
 }
 .category_title_div {
 	float: left;
@@ -561,7 +562,7 @@ div.day-number {
 	float: left;
 	height: 75%;
 	width: 100%;
-	font-family: Lato;
+	font-family: Helvetica Neue,Helvetica,Arial,sans-serif;
 	font-size: 27px;
 	margin-top: 25%;
 	overflow: hidden;
@@ -575,7 +576,7 @@ div.day-number {
 .eventpopouphead {
 	float: left;
 	margin-right: 2px;
-	width: 23%;
+	width: 30%;
 }
 .eventpopoupbody {
 	width: 95%;
@@ -589,10 +590,8 @@ td.calendar-day-head {
 body {
 }
 .eventpopoupcontent {
-	font-family: OpenSans-Light;
 }
 td.calendar-day {
-	font-family: OpenSans-Light;
 	font-size: 18px;
 }
 .page_body_div {
