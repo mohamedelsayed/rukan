@@ -182,7 +182,7 @@ echo $this->Form->create('admissions', array('type' =>'file','id'=>'admissionsfo
         <input type="radio" name="marital_status" value="1" checked="checked" />Married
         <input type="radio" name="marital_status" value="0" />Divorced   
         (if so, custody is with: 
-        <input class="parent_informations input_in_table marital_status_custody" id="marital_status_custody" type="text" name="marital_status_custody" value="" placeholder="_________________________">
+        <input class="parent_informations input_in_table marital_status_custody" id="marital_status_custody" type="text" name="marital_status_custody" value="" placeholder="________________________________________________________">
         )
     </div>
     <div class="parent_informations-title head_div head_div_left">2.2. Siblings:  

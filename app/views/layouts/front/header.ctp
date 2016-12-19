@@ -65,8 +65,13 @@
                                             </li>
                                         <?php }?>
                                     </ul>
-                                <?php }else*/if(!empty($header_cat['ChildCat'])){?>
-                                    <ul style="width: auto;overflow: hidden;">
+                                <?php }else*/?>
+                                <?php if(!empty($header_cat['ChildCat'])){
+                                	$style_menu_chlid = '';
+                                	if($header_cat['Cat']['id'] == 9){
+                                		$style_menu_chlid = 'left: -150px;';                                		
+                                	}?>
+                                    <ul style="width: auto;overflow: hidden;<?php echo $style_menu_chlid;?>">
                                         <?php foreach ($header_cat['ChildCat'] as $key => $header_cat_child) {
                                             $in_url = $base_url.'/page/show/'.$header_cat['Cat']['id'].'/'.$header_cat_child['id'];
                                             $additional_code = '';

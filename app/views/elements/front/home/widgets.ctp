@@ -2,7 +2,7 @@
     foreach ($widgets as $key => $widget) {
         $data = $widget['Widget'];
 		$id = $data['id'];		
-        if($id == 2 || $id == 3){?>
+        if($id == 3){?>
             <?php /*<div class="write_top">                
                 <?php $title = $this->element('front'.DS.'view_string_according_lang', array('str_en' => $data['title'], 'str_ar' => $data['title_ar']));
                 echo strtoupper($title);?>

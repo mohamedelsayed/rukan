@@ -17,7 +17,7 @@
 		<?php echo $this->Html->charset();?>
 		<title>
 			<?php if($this->name != 'Home') echo $title_for_layout.' | '; 
-			echo $this->Session->read('Setting.title'); ?>
+			echo $this->Session->read('Setting.title');?>
 		</title>
 		<!--Share default image and description-->
 		<meta property="og:image" content="<?php echo (isset($shareImage))?$base_url.'/img/upload/'.$shareImage:$base_url.'/img/front/logo.png';?>"/>
@@ -32,8 +32,8 @@
 		<meta name="MSSmartTagsPreventParsing" content="true" />
 		<meta name="Expires" content="-1" />
 		<meta name="reply-to" content="<?php echo $this->Session->read('Setting.email');?>" />
-		<meta name="classification" content="Business" />
-		<meta name="Copyright" content="Bloom" />
+		<meta name="classification" content="Education" />
+		<meta name="Copyright" content="<?php echo $this->Session->read('Setting.title');?>" />
 		<meta name="Author" content="" />
 		<meta http-equiv="Cache-Control" content="Public" />
 		<meta http-equiv="Pragma" content="No-Cache" />
@@ -85,7 +85,8 @@
 		    <?php if(!empty($widgets)){
                 foreach ($widgets as $key => $widget) {
                     $data = $widget['Widget'];
-                    if($data['id'] == 1){
+					$id = $data['id'];	
+                    if($id == 1){
                         $resize->smartResizeImage($data['image'], 1500);?>  
                         <div class="slider_main_div">              
                             <div class="slider">
@@ -101,11 +102,17 @@
                             </div>
                         </div>
                     <?php }?>
+                    <?php if($id == 2){?>
+			            <div class="home_word_widgets home_word_widgets<?php echo $id;?>">			            	
+							<?php $body = $this->element('front'.DS.'view_string_according_lang', array('str_en' => $data['body'], 'str_ar' => $data['body_ar']));
+			                echo $this->element('front'.DS.'remove_unneeded_tags_from_string', array('string' => $body));?>            
+			            </div>
+			        <?php }?>
                 <?php }?>
             <?php }?>
 		    <div class="container">		        
     			<?php //echo $this->Session->flash ();?>
-    			<?php echo $content_for_layout; ?>				  
+    			<?php echo $content_for_layout;?>				  
 			</div>
 			<?php include_once('footer.ctp');?>
 		</div>
