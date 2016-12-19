@@ -11,19 +11,15 @@ li {
     display: table-cell;
 }
 a {
-    transition: all 0.5s ease 0s;
-}
-.men_face a:hover{
-	transform: rotate(360deg);
-	transition: all 0.5s ease 0s;
+    transition: 0.5s all;
 }
 .men_face a img:hover{
-	transform: rotate(360deg);
-	transition: all 0.5s ease 0s;
+	transform: rotateY(360deg);
+	transition: 0.5s all;
 }
 .adders_face_s img:hover{
-	transform: rotate(360deg);
-	transition: all 0.5s ease 0s;
+	transform: rotateY(360deg);
+	transition: 0.5s all;
 }
 p{
 	margin-top: 0px;
@@ -1005,7 +1001,7 @@ ul.tabs li.current{
 	color: #414141;
 	font-weight: bold;
 	width: 100%;
-	padding: 0% 0;
+	padding: 0 0 10px;
 }
 .top_a_con{
 	float:left;
