@@ -7,9 +7,9 @@
  */
 $http_host = $_SERVER['HTTP_HOST'];
 $db_host = 'localhost';
-$database = 'rukan';
-$username = 'root';
-$password = 'root';
+$db_name = 'rukan';
+$db_user = 'root';
+$db_password = 'root';
 $http_string = "http://";
 if (isset($_SERVER['HTTPS']) && strtolower($_SERVER['HTTPS']) == 'on') {
     $http_string = "https://";
@@ -21,25 +21,25 @@ if ($dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '\/')) {
 }
 $base_url = str_replace('/app/webroot', '', $base_url);
 if (strpos($http_host, '.mohamedelsayed.net') !== FALSE) {
-	$database = 'elsayed_rukan';
-	$username = 'elsayed_rukan';
-    $password = 'xPBNZvrd8u8z';
+	$db_name = 'elsayed_rukan';
+	$db_user = 'elsayed_rukan';
+    $db_password = 'xPBNZvrd8u8z';
 }
 if (strpos($http_host, 'lifecoachingegypt.com') !== FALSE) {
-    $database = 'lifecoj0_lifecoa_chingwebsite';
-	$username = 'lifecoj0_chidbus';
-    $password = 'L0gmeuIn0W3';	
+    $db_name = 'lifecoj0_lifecoa_chingwebsite';
+	$db_user = 'lifecoj0_chidbus';
+    $db_password = 'L0gmeuIn0W3';	
 }elseif (strpos($http_host, 'localhost') !== FALSE) {
     if (PHP_OS == 'Linux') {
     } else {
-        $password = '';
+        $db_password = '';
     }
 }
 $default_image = $base_url.'/img/front/default_image.jpg';
 define('DB_HOST', $db_host);
-define('DB_NAME', $database);
-define('DB_USERNAME', $username);
-define('DB_PASSWORD', $password);
+define('DB_NAME', $db_name);
+define('DB_USERNAME', $db_user);
+define('DB_PASSWORD', $db_password);
 define('BASE_URL', $base_url);
 define('DEFAULT_IMAGE', $default_image);
 define('STMP_TIMEOUT', 30);
