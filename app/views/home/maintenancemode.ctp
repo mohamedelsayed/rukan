@@ -14,6 +14,11 @@
 					<img alt="<?php echo $this->Session->read('Setting.title');?>" src="<?php echo BASE_URL.'/img/front/';?>logo.png" />
 				</a>
 			</div>
+			<div class="maintenancelogo">
+				<a href="<?php echo BASE_URL;?>">
+					<img alt="<?php echo $this->Session->read('Setting.title');?>" src="<?php echo BASE_URL.'/img/front/';?>under-construct.gif" />
+				</a>
+			</div>			
 			<div class="maintenancetext">
 				<?php echo $maintenance_mode_text;?>
 			</div>
