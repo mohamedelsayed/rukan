@@ -25,10 +25,10 @@ if (strpos($http_host, '.mohamedelsayed.net') !== FALSE) {
 	$db_user = 'elsayed_rukan';
     $db_password = 'xPBNZvrd8u8z';
 }
-if (strpos($http_host, 'lifecoachingegypt.com') !== FALSE) {
-    $db_name = 'lifecoj0_lifecoa_chingwebsite';
-	$db_user = 'lifecoj0_chidbus';
-    $db_password = 'L0gmeuIn0W3';	
+if (strpos($http_host, 'rukanedu.com') !== FALSE) {
+    $db_name = 'rukanedu_site_db';
+	$db_user = 'rukanedu_site_db';
+    $db_password = '0NUG9Hd2aAWK';	
 }elseif (strpos($http_host, 'localhost') !== FALSE) {
     if (PHP_OS == 'Linux') {
     } else {
@@ -43,9 +43,9 @@ define('DB_PASSWORD', $db_password);
 define('BASE_URL', $base_url);
 define('DEFAULT_IMAGE', $default_image);
 define('STMP_TIMEOUT', 30);
-define('STMP_USERNAME', 'noreply@lifecoachingegypt.com');
+define('STMP_USERNAME', 'noreply@rukanedu.com');
 define('STMP_PASSWORD', 'e9!pf_}i]ex~');
-define('STMP_SERVER', 'mail.lifecoachingegypt.com');
+define('STMP_SERVER', 'mail.rukanedu.com');
 define('STMP_PORT', 26);
 define('SMTPSECURE', FALSE);
 define('SEND_STMP', FALSE);
