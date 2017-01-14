@@ -240,7 +240,7 @@ class AppController extends Controller {
 		$this->set('header_cats',$cats);		
 	}
 	function checkMaintenanceMode(){
-		$front_controllers_list = array('Home','Page', 'Article', 'Faq', 'Texts');
+		$front_controllers_list = array('Home','Page', 'Article', 'Faq', 'Texts', 'Calendar', 'Gallery', 'Career');
 		if(!$this->isAuthentic()){
 			if(in_array($this->name, $front_controllers_list)){
 				$this->loadModel('Setting');
