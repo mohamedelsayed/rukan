@@ -20,16 +20,7 @@ if ($dir = rtrim(dirname($_SERVER['SCRIPT_NAME']), '\/')) {
 	$base_url .= $base_path;
 }
 $base_url = str_replace('/app/webroot', '', $base_url);
-if (strpos($http_host, '.mohamedelsayed.net') !== FALSE) {
-	$db_name = 'elsayed_rukan';
-	$db_user = 'elsayed_rukan';
-    $db_password = 'xPBNZvrd8u8z';
-}
-if (strpos($http_host, 'rukanedu.com') !== FALSE) {
-    $db_name = 'rukanedu_site_db';
-	$db_user = 'rukanedu_site_db';
-    $db_password = '0NUG9Hd2aAWK';	
-}elseif (strpos($http_host, 'localhost') !== FALSE) {
+if (strpos($http_host, 'localhost') !== FALSE) {
     if (PHP_OS == 'Linux') {
     } else {
         $db_password = '';
